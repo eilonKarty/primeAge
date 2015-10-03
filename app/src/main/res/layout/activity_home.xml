@@ -9,7 +9,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="5dip"
-    android:paddingBottom="30dip">
+    android:paddingBottom="30dip"
+    android:gravity="center">
 
         <com.primage.user.primeage.PButton
             android:id="@+id/apps_button"
