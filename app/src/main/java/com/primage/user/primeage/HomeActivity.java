@@ -1,5 +1,4 @@
 package com.primage.user.primeage;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +11,8 @@ public class HomeActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        View view = this.getWindow().getDecorView();
+        view.setBackgroundColor(-1);
     }
 
     public void showApps(View v) {

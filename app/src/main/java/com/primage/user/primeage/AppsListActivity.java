@@ -22,6 +22,8 @@ public class AppsListActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apps_list);
+        View view = this.getWindow().getDecorView();
+        view.setBackgroundColor(-1);
 
         loadApps();
         loadListView();
