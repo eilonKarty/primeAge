@@ -13,7 +13,7 @@
 
 
     </TableRow>
-    <com.primage.user.primeage.PButton
+    <com.primage.user.primeage.pView.pButton
         android:id="@+id/apps_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
