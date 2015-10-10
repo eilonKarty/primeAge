@@ -6,16 +6,21 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
+<<<<<<< HEAD
             android:name="com.primage.user.primeage.HomeActivity"
             android:label="Simple Launcher Home"
+=======
+            android:name=".HomeActivity"
+            android:label="simpli"
+>>>>>>> dev_eilon
             android:launchMode="singleTask"
             android:stateNotNeeded="true"
+            android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Wallpaper.NoTitleBar.Fullscreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.HOME" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -23,8 +28,10 @@
         <activity
             android:name="com.primage.user.primeage.AppsListActivity"
             android:label="@string/title_activity_apps_list"
+            android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         </activity>
+
     </application>
 
 </manifest>
