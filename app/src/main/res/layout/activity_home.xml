@@ -1,29 +1,190 @@
 <TableLayout  xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    tools:context=".HomeActivity" >
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    tools:context=".HomeActivity"
+    android:weightSum="4.2">
     <TableRow
-    android:id="@+id/tableRow1"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:padding="5dip"
-    android:paddingBottom="30dip"
-        >
+        android:id="@+id/tableRow1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingTop="20dp"
+        android:weightSum="3">
 
+        <ImageButton
+            android:src="@drawable/btn"
+            android:id="@+id/apps_button"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:layout_margin="1dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:onClick="showApps"/>
+
+        <ImageButton
+            android:src="@drawable/btn"
+            android:id="@+id/apps_button2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_margin="1dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:onClick="showApps"/>
+
+        <ImageButton
+            android:src="@drawable/btn"
+            android:id="@+id/apps_button100"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_margin="1dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:onClick="showApps"/>
 
     </TableRow>
-    <com.primage.user.primeage.PButton
-        android:id="@+id/apps_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="10dp"
-        android:text="Show Apps"
-        android:onClick="showApps"
-        android:paddingBottom="29dip"/>
 
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:weightSum="3">
+
+        <ImageButton
+            android:src="@drawable/btn"
+            android:id="@+id/apps_button3"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_margin="1dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:onClick="showApps"/>
+
+        <ImageButton
+            android:src="@drawable/btn"
+            android:id="@+id/apps_button4"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_margin="1dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:onClick="showApps"/>
+
+        <ImageButton
+            android:src="@drawable/btn"
+            android:id="@+id/apps_button200"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_margin="1dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:onClick="showApps"/>
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:weightSum="3">
+
+        <ImageButton
+            android:src="@drawable/btn"
+            android:id="@+id/apps_button5"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_margin="1dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:onClick="showApps"/>
+
+        <ImageButton
+            android:src="@drawable/btn"
+            android:id="@+id/apps_button6"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_margin="1dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:onClick="showApps"/>
+
+        <ImageButton
+            android:src="@drawable/btn"
+            android:id="@+id/apps_button300"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_margin="1dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:onClick="showApps"/>
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingTop="20dp"
+        android:weightSum="3">
+
+        <ImageButton
+            android:src="@drawable/btnl"
+            android:id="@+id/apps_button7"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_margin="1dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:onClick="showApps"/>
+
+        <ImageButton
+            android:src="@drawable/btnm"
+            android:id="@+id/apps_button8"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_margin="1dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:onClick="showApps"/>
+
+        <ImageButton
+            android:src="@drawable/btnr"
+            android:id="@+id/apps_button400"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_margin="1dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:onClick="showApps"/>
+
+    </TableRow>
 
 </TableLayout>
