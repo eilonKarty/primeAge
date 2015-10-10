@@ -11,6 +11,8 @@ public class HomeActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        // Setting the background color to white
         View view = this.getWindow().getDecorView();
         view.setBackgroundColor(-1);
     }

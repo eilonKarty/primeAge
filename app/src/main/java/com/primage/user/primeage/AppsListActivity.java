@@ -22,6 +22,8 @@ public class AppsListActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apps_list);
+
+        // Setting the background color to white
         View view = this.getWindow().getDecorView();
         view.setBackgroundColor(-1);
 
@@ -88,6 +90,5 @@ public class AppsListActivity extends Activity {
             }
         });
     }
-
 
 }
