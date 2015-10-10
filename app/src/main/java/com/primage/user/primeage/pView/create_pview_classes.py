@@ -1,5 +1,13 @@
 #!usr/bin/python
 
+'''
+
+This script generate all the view three classes.
+ Template file is needed, contains the right varibales in format of $(VARIABLE_NAME)
+
+
+'''
+
 from sys import argv
 import shutil
 import os
