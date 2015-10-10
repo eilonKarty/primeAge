@@ -21,4 +21,10 @@ public class HomeActivity extends Activity {
         Intent i = new Intent(this, AppsListActivity.class);
         startActivity(i);
     }
+
+    // A method for starting the dialer
+    public void popDialer(View v) {
+        Intent i = new Intent(this, PrimeDialer.class);
+        startActivity(i);
+    }
 }
