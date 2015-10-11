@@ -50,7 +50,7 @@ public class PrimeDialer extends Activity {
     }
 
     private void checkNumberSize(){
-        if(number.length() == 3){
+        if(number.length() == 3 || number.length() == 7){
             number += "-";
         }
     }
@@ -133,22 +133,27 @@ public class PrimeDialer extends Activity {
     }
 
     public void addStar(View v){
-        number = number + "0";
+        number = number + "*";
         TextView tv = (TextView)findViewById(R.id.number);
         tv.setText(number);
         checkNumberSize();
     }
 
     public void deleteFigure(View v) {
+        boolean flg = false;
         if (number.length() != 0){
-            if (number.length() == 5) {
+            if (number.length() == 5 || number.length() == 9) {
                 number = number.substring(0, number.length() - 2);
+                flg = true;
             } else {
                 number = number.substring(0, number.length() - 1);
             }
 
             TextView tv = (TextView) findViewById(R.id.number);
             tv.setText(number);
+            if (flg){
+                number += "-";
+            }
         }
     }
 
@@ -159,5 +164,14 @@ public class PrimeDialer extends Activity {
             Intent intent = new Intent(Intent.ACTION_CALL, uri);
             startActivity(intent);
         }
+    }
+
+    public void finishAct(View v){
+        finish();
+    }
+
+    public void goHome(View v){
+        Intent i = new Intent(this, HomeActivity.class);
+        startActivity(i);
     }
 }
