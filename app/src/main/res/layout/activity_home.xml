@@ -22,7 +22,7 @@
             android:weightSum="3">
 
             <ImageButton
-                android:background="@drawable/btn"
+                android:background="@drawable/phonebtn"
                 android:id="@+id/apps_button"
                 android:layout_height="wrap_content"
                 android:layout_width="0dp"
