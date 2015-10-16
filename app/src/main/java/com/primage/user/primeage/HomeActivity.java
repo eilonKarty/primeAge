@@ -15,6 +15,7 @@ public class HomeActivity extends Activity {
         // Setting the background color to white
         View view = this.getWindow().getDecorView();
         view.setBackgroundColor(-1);
+
     }
 
     public void showApps(View v) {
