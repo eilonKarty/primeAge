@@ -4,5 +4,5 @@
         android:drawable="@drawable/main_button_pressed" /> <!-- pressed -->
     <item android:state_focused="true"
         android:drawable="@drawable/main_button_pressed" /> <!-- focused -->
-    <item android:drawable="@drawable/phone_button" /> <!-- default -->
+    <item android:drawable="@drawable/news_button" /> <!-- default -->
 </selector>
