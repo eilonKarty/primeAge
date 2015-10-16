@@ -6,10 +6,12 @@ import android.view.View;
 
 
 public class HomeActivity extends Activity {
+    Assistant assistant;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.assistant = new Assistant(HomeActivity.this, 1);
         setContentView(R.layout.activity_home);
 
         // Setting the background color to white
@@ -26,5 +28,10 @@ public class HomeActivity extends Activity {
     public void popDialer(View v) {
         Intent i = new Intent(this, PrimeDialer.class);
         startActivity(i);
+    }
+
+    public void createAssistant(View v) {
+        assistant.activateAssistantStateMainScreen();
+        assistant.activateAssistantStateSecondaryScreen();
     }
 }
