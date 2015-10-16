@@ -12,14 +12,14 @@ android:orientation="vertical" >
             android:layout_height="match_parent"
             android:layout_gravity="center"
             tools:context="com.primage.user.primeage.PrimeDialer"
-            android:weightSum="48">
+            android:weightSum="52">
 
-            <TableRow
+            <LinearLayout
                 android:id="@+id/tableRow1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="7"
-                android:paddingTop="20dp"
+                android:layout_weight="14"
+
                 android:weightSum="1">
 
 
@@ -28,14 +28,14 @@ android:orientation="vertical" >
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="fill_parent"
-                    android:background="@drawable/bkgrd"
+                    android:background="@drawable/dial_box"
                     android:textColor="#FFFFFF"
                     android:gravity="center"
-                    android:layout_margin="1dp"
-                    android:textSize="32sp"
+                    android:layout_margin="9dp"
+                    android:textSize="45sp"
                     android:text="" />
 
-            </TableRow>
+            </LinearLayout>
 
             <TableRow
                 android:id="@+id/tableRow2"
@@ -52,6 +52,7 @@ android:orientation="vertical" >
                     android:layout_height="wrap_content"
                     android:layout_margin="0dp"
                     android:textSize="32sp"
+                    android:textStyle="bold"
                     android:text="1"
                     android:onClick="addOne"/>
 
@@ -63,6 +64,7 @@ android:orientation="vertical" >
                     android:layout_height="wrap_content"
                     android:layout_margin="0dp"
                     android:textSize="32sp"
+                    android:textStyle="bold"
                     android:text="2"
                     android:onClick="addTwo"/>
 
@@ -74,6 +76,7 @@ android:orientation="vertical" >
                     android:layout_height="wrap_content"
                     android:layout_margin="0dp"
                     android:textSize="32sp"
+                    android:textStyle="bold"
                     android:text="3"
                     android:onClick="addThree"/>
 
@@ -94,6 +97,7 @@ android:orientation="vertical" >
                     android:layout_height="wrap_content"
                     android:layout_margin="0dp"
                     android:textSize="32sp"
+                    android:textStyle="bold"
                     android:text="4"
                     android:onClick="addFour"/>
 
@@ -105,6 +109,7 @@ android:orientation="vertical" >
                     android:layout_height="wrap_content"
                     android:layout_margin="0dp"
                     android:textSize="32sp"
+                    android:textStyle="bold"
                     android:text="5"
                     android:onClick="addFive"/>
 
@@ -116,6 +121,7 @@ android:orientation="vertical" >
                     android:layout_height="wrap_content"
                     android:layout_margin="0dp"
                     android:textSize="32sp"
+                    android:textStyle="bold"
                     android:text="6"
                     android:onClick="addSix"/>
 
@@ -136,6 +142,7 @@ android:orientation="vertical" >
                     android:layout_height="wrap_content"
                     android:layout_margin="0dp"
                     android:textSize="32sp"
+                    android:textStyle="bold"
                     android:text="7"
                     android:onClick="addSeven"/>
 
@@ -147,6 +154,7 @@ android:orientation="vertical" >
                     android:layout_height="wrap_content"
                     android:layout_margin="0dp"
                     android:textSize="32sp"
+                    android:textStyle="bold"
                     android:text="8"
                     android:onClick="addEight"/>
 
@@ -158,6 +166,7 @@ android:orientation="vertical" >
                     android:layout_height="wrap_content"
                     android:layout_margin="0dp"
                     android:textSize="32sp"
+                    android:textStyle="bold"
                     android:text="9"
                     android:onClick="addNine"/>
 
@@ -178,6 +187,7 @@ android:orientation="vertical" >
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
                 android:textSize="32sp"
+                android:textStyle="bold"
                 android:text="*"
                 android:onClick="addStar"/>
 
@@ -189,6 +199,7 @@ android:orientation="vertical" >
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
                 android:textSize="32sp"
+                android:textStyle="bold"
                 android:text="0"
                 android:onClick="addZero"/>
 
@@ -200,6 +211,7 @@ android:orientation="vertical" >
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
                 android:textSize="32sp"
+                android:textStyle="bold"
                 android:text="#"
                 android:onClick="addHash"/>
 
@@ -209,29 +221,28 @@ android:orientation="vertical" >
             android:id="@+id/tableRow6"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="7"
+            android:layout_weight="4"
             android:weightSum="2">
 
             <Button
-                android:background="@drawable/callbtn"
+                android:background="@drawable/call"
                 android:id="@+id/apps_button11"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_height="wrap_content"
+                android:layout_height="fill_parent"
                 android:layout_margin="0dp"
                 android:textSize="32sp"
-                android:text="CALL"
+
                 android:onClick="makeCall"/>
 
             <Button
-                android:background="@drawable/dellbtn"
+                android:background="@drawable/delete"
                 android:id="@+id/apps_button12"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_height="wrap_content"
+                android:layout_height="fill_parent"
                 android:layout_margin="0dp"
                 android:textSize="32sp"
-                android:text="DELETE"
                 android:onClick="deleteFigure"/>
 
 
@@ -242,7 +253,7 @@ android:orientation="vertical" >
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_weight="6"
-            android:paddingTop="20dp"
+
             >
 
             <ImageButton

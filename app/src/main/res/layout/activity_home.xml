@@ -12,17 +12,46 @@
         android:layout_height="match_parent"
         android:layout_gravity="center"
         tools:context=".HomeActivity"
-        android:weightSum="4">
+        android:weightSum="5">
+
+        <TableRow
+            android:id="@+id/tableRow0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <AnalogClock
+                android:id="@+id/analogClock1"
+                android:background="@drawable/clockbg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:background="@drawable/clockbg"
+                android:id="@+id/date"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:textSize="32sp"
+                android:textColor="#ffffff"
+                android:text="Hello World"/>
+
+
+
+        </TableRow>
+
+        
         <TableRow
             android:id="@+id/tableRow1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:paddingTop="25dp"
             android:weightSum="3">
 
             <ImageButton
-                android:background="@drawable/btn"
+                android:background="@drawable/phonebtn"
                 android:id="@+id/apps_button"
                 android:layout_height="wrap_content"
                 android:layout_width="0dp"
@@ -31,7 +60,7 @@
                 android:onClick="popDialer"/>
 
             <ImageButton
-                android:background="@drawable/btn"
+                android:background="@drawable/messagesbtn"
                 android:id="@+id/apps_button2"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -40,7 +69,7 @@
                 android:onClick="showApps"/>
 
             <ImageButton
-                android:background="@drawable/btn"
+                android:background="@drawable/alarmbtn"
                 android:id="@+id/apps_button100"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -58,7 +87,7 @@
             android:weightSum="3">
 
             <ImageButton
-                android:background="@drawable/btn"
+                android:background="@drawable/contactsbtn"
                 android:id="@+id/apps_button3"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -67,7 +96,7 @@
                 android:onClick="showApps"/>
 
             <ImageButton
-                android:background="@drawable/btn"
+                android:background="@drawable/flashbtn"
                 android:id="@+id/apps_button4"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -76,7 +105,7 @@
                 android:onClick="showApps"/>
 
             <ImageButton
-                android:background="@drawable/btn"
+                android:background="@drawable/cambtn"
                 android:id="@+id/apps_button200"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -94,7 +123,7 @@
             android:weightSum="3">
 
             <ImageButton
-                android:background="@drawable/btn"
+                android:background="@drawable/newsbtn"
                 android:id="@+id/apps_button5"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -103,7 +132,7 @@
                 android:onClick="showApps"/>
 
             <ImageButton
-                android:background="@drawable/btn"
+                android:background="@drawable/settingsbtn"
                 android:id="@+id/apps_button6"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -112,7 +141,7 @@
                 android:onClick="showApps"/>
 
             <ImageButton
-                android:background="@drawable/btn"
+                android:background="@drawable/appsbtn"
                 android:id="@+id/apps_button300"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -127,8 +156,7 @@
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:paddingTop="25dp"
-            >
+            android:paddingTop="15dp" >
 
             <ImageButton
                 android:background="@drawable/btnl"
