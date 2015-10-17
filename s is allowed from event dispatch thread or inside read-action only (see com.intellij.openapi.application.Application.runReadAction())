@@ -1,0 +1,106 @@
+[33mcommit b320860ba73fe67ce19a0f667ad924fa97b1d9cf[m
+Author: eilonKarty <eilon.karty@mail.huji.ac.il>
+Date:   Sat Oct 17 17:43:32 2015 +0300
+
+    clock + date
+
+[33mcommit 111ed8c36e5f5a2aaf28bcd2c3ba772b0194a786[m
+Author: eilonKarty <eilon.karty@mail.huji.ac.il>
+Date:   Sat Oct 17 00:18:12 2015 +0300
+
+    clock and size fix
+
+[33mcommit 814a8061421b090a7d446111a423e25e39659433[m
+Author: eilonKarty <eilon.karty@mail.huji.ac.il>
+Date:   Fri Oct 16 22:15:26 2015 +0300
+
+    home screen buttons
+
+[33mcommit 5255f5b64c2f37a6d13bdfb91d8258859c6078cd[m
+Author: eilonKarty <eilon.karty@mail.huji.ac.il>
+Date:   Fri Oct 16 21:34:08 2015 +0300
+
+    dialer fix + buttons in home screen
+    
+    hello
+
+[33mcommit a46867ec94ff34055720cfcd0d62fec22697ac2e[m
+Merge: 185dfde eff3334
+Author: eilonKarty <eilon.karty@mail.huji.ac.il>
+Date:   Fri Oct 16 20:21:14 2015 +0300
+
+    Merge remote-tracking branch 'origin/shakde_des' into dev_eilon
+
+[33mcommit eff3334e1a4f4aa3859883aa2518b9c855b7f439[m
+Author: shakedlokits <shaked.lokits@gmail.com>
+Date:   Fri Oct 16 19:47:32 2015 +0300
+
+    added image assets
+
+[33mcommit 185dfdef2a9945af084c552d0a2f7492b2fbb93e[m
+Author: eilonKarty <eilon.karty@mail.huji.ac.il>
+Date:   Sun Oct 11 04:58:50 2015 +0300
+
+    for or
+
+[33mcommit 6a001a88a8667d506b4ad870e13dc93b125e1c01[m
+Author: eilonKarty <eilon.karty@mail.huji.ac.il>
+Date:   Sun Oct 11 03:14:08 2015 +0300
+
+    dialer
+
+[33mcommit 2efd84d77c6d7ed9a3e064d0383cccfc85fdb4b4[m
+Author: eilonKarty <eilon.karty@mail.huji.ac.il>
+Date:   Sat Oct 10 23:12:43 2015 +0300
+
+    Many many many changes...now good
+
+[33mcommit eefbc00aaea402a35adcc5f9b895eb3a82901f4d[m
+Author: shakedlokits <shaked.lokits@gmail.com>
+Date:   Sat Oct 10 15:28:23 2015 +0300
+
+    added main agent button assets
+
+[33mcommit 2340e6930ad2a55f0e6796a7fc0d34b8feefb6a2[m
+Author: eilonKarty <eilon.karty@mail.huji.ac.il>
+Date:   Sat Oct 10 10:16:34 2015 +0300
+
+    display rearrangement and button padding fix
+
+[33mcommit 0bbbba06dc35fb3e75a2b5bc8fd7a6b172010900[m
+Author: eilonKarty <eilon.karty@mail.huji.ac.il>
+Date:   Sat Oct 3 17:38:46 2015 +0300
+
+    color adjustment + button fix
+
+[33mcommit e4ffb1d3ecfe50bf914f3d0f5b5aa32b546bc12c[m
+Author: eilonKarty <eilon.karty@mail.huji.ac.il>
+Date:   Sat Oct 3 17:32:52 2015 +0300
+
+    button alignment
+
+[33mcommit ff551aba993b7698bb9ce8691dc51b691d6ae411[m
+Author: eilonKarty <eilon.karty@mail.huji.ac.il>
+Date:   Sat Oct 3 17:30:22 2015 +0300
+
+    background color change
+
+[33mcommit 86cc26882c4d64a1c253b64286fe5033b15eb76d[m
+Author: eilonKarty <eilon.karty@mail.huji.ac.il>
+Date:   Sat Oct 3 17:12:44 2015 +0300
+
+    small changes
+
+[33mcommit 13541b9b777be4b6c56837caa50d9d78d5351868[m
+Author: eilonKarty <eilon.karty@mail.huji.ac.il>
+Date:   Sat Oct 3 16:57:04 2015 +0300
+
+    d
+    
+    c
+
+[33mcommit 0484af70a262fda7a38e0880699ec938e93264b0[m
+Author: eilonKarty <eilon.karty@mail.huji.ac.il>
+Date:   Wed Sep 30 13:29:23 2015 +0300
+
+    Initial commit
