@@ -7,7 +7,6 @@ android:layout_height="fill_parent"
 android:orientation="vertical"
 android:weightSum="2"
 android:background="@drawable/Background"
-
     >
 
     <LinearLayout
@@ -40,35 +39,50 @@ android:background="@drawable/Background"
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Name:"
-            android:textSize="12pt"
+            android:text="Contrast:"
+            android:textSize="13pt"
             android:fontFamily="sans-serif-condensed"
             android:textStyle="bold"
             android:layout_gravity="top"
             android:layout_marginLeft="40dp"
             android:textColor="#513510"
-
-             />
-
-            <EditText
-                android:layout_width="290dip"
-                android:layout_height="60dp"
-                android:background="@drawable/text_box"
-                android:layout_marginLeft="40dp"
-                android:layout_marginTop="10dp"
-                android:layout_gravity="top"
-                android:singleLine="true"
-                android:padding="12dp"
-                android:hint="Type your name here"
-                android:textColorHint="#513510"
-
             />
+
+
+        <FrameLayout
+            android:layout_width="290dip"
+            android:layout_height="60dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="top"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/slider_back"
+                >
+            </ImageView>
+            <ImageButton
+                android:layout_height="33dp"
+                android:layout_width="65dp"
+                android:background="@drawable/slider_button"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="top|center"
+
+                />
+
+
+
+        </FrameLayout>
+
+
+
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Text size:"
-            android:textSize="12pt"
+            android:text="Sensitivity:"
+            android:textSize="13pt"
             android:fontFamily="sans-serif-condensed"
             android:textStyle="bold"
             android:layout_gravity="center|left"
@@ -77,52 +91,23 @@ android:background="@drawable/Background"
             android:textColor="#513510"
             />
 
-        <LinearLayout
-            android:layout_width="240dp"
+        <ImageButton
+            android:layout_width="80dp"
             android:layout_height="80dp"
             android:orientation="horizontal"
-            android:weightSum="3"
             android:layout_gravity="center"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/pressure_button"
             >
+        </ImageButton>
 
-            <Button
-                android:layout_height="fill_parent"
-                android:layout_width="fill_parent"
-                android:layout_weight="1"
-                android:background="@drawable/main_button"
-                android:text="A"
-                android:textSize="32dp"
-                android:textColor="#513510"
-                />
-
-            <Button
-                android:layout_height="fill_parent"
-                android:layout_width="fill_parent"
-                android:layout_weight="1"
-                android:background="@drawable/main_button"
-                android:text="A"
-                android:textSize="44dp"
-                android:textColor="#513510"
-                />
-
-            <Button
-                android:layout_height="fill_parent"
-                android:layout_width="fill_parent"
-                android:layout_weight="1"
-                android:background="@drawable/main_button"
-                android:text="A"
-                android:textSize="60dp"
-                android:textColor="#513510"
-
-                />
-        </LinearLayout>
 
         <ImageButton
             android:layout_width="300dp"
             android:layout_height="60dp"
             android:background="@drawable/ahead_button"
             android:layout_gravity="center"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="5dp"
 
             />
 

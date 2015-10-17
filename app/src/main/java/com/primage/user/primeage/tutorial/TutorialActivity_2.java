@@ -3,18 +3,15 @@ package com.primage.user.primeage.tutorial;
 
 import android.app.Activity;
 import android.graphics.Point;
-import android.provider.Settings;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Display;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.LinearLayout;
 
 import com.primage.user.primeage.Globals;
 import com.primage.user.primeage.R;
 
-public class TutorialActivity_1 extends Activity {
+public class TutorialActivity_2 extends Activity {
 
 
     @Override
@@ -53,5 +50,4 @@ public class TutorialActivity_1 extends Activity {
 
         return super.onOptionsItemSelected(item);
     }
-
 }
