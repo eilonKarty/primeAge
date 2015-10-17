@@ -35,10 +35,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
                 android:textSize="32sp"
-                android:textColor="#ffffff"
-                android:text="Hello World"/>
-
-
+                android:textColor="#472e14"
+                android:gravity="center" />
 
         </TableRow>
 
@@ -65,8 +63,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:layout_margin="0dp"
-                android:onClick="showApps"/>
+                android:layout_margin="0dp" />
 
             <ImageButton
                 android:background="@drawable/alarmbtn"
@@ -74,8 +71,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:layout_margin="0dp"
-                android:onClick="showApps"/>
+                android:layout_margin="0dp" />
 
         </TableRow>
 
@@ -92,8 +88,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:layout_margin="0dp"
-                android:onClick="showApps"/>
+                android:layout_margin="0dp" />
 
             <ImageButton
                 android:background="@drawable/flashbtn"
@@ -101,8 +96,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:layout_margin="0dp"
-                android:onClick="showApps"/>
+                android:layout_margin="0dp" />
 
             <ImageButton
                 android:background="@drawable/cambtn"
@@ -110,8 +104,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:layout_margin="0dp"
-                android:onClick="showApps"/>
+                android:layout_margin="0dp" />
 
         </TableRow>
 
@@ -129,7 +122,7 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
-                android:onClick="showApps"/>
+                />
 
             <ImageButton
                 android:background="@drawable/settingsbtn"
@@ -137,8 +130,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:layout_margin="0dp"
-                android:onClick="showApps"/>
+                android:layout_margin="0dp" />
 
             <ImageButton
                 android:background="@drawable/appsbtn"
@@ -164,8 +156,7 @@
                 android:layout_width="0dip"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:layout_margin="0dp"
-                android:onClick="showApps"/>
+                android:layout_margin="0dp" />
 
             <ImageButton
                 android:background="@drawable/btnm"
@@ -173,8 +164,7 @@
                 android:layout_width="0dip"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:layout_margin="0dp"
-                android:onClick="showApps"/>
+                android:layout_margin="0dp" />
 
             <ImageButton
                 android:background="@drawable/btnr"
@@ -182,8 +172,7 @@
                 android:layout_width="0dip"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:layout_margin="0dp"
-                android:onClick="showApps"/>
+                android:layout_margin="0dp" />
 
         </TableRow>
 
