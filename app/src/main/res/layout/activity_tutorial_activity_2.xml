@@ -10,7 +10,7 @@ android:background="@drawable/background"
     >
 
     <LinearLayout
-        android:id="@+id/ezra_welcoming"
+        android:id="@+id/ezraWelcoming"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_weight="1.2"
