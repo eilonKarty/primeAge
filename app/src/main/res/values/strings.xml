@@ -7,4 +7,7 @@
     <string name="title_activity_apps_list">AppsListActivity</string>
     <string name="title_activity_app_detail">AppDetail</string>
     <string name="title_activity_prime_dialer">primeDialer</string>
+    <string name="title_activity_contact_list">ContactList</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_contacts">ContactsActivity</string>
 </resources>

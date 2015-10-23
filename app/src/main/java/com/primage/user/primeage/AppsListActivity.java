@@ -91,4 +91,12 @@ public class AppsListActivity extends Activity {
         });
     }
 
+    public void finishAct(View v){
+        finish();
+    }
+
+    public void goHome(View v){
+        Intent i = new Intent(this, HomeActivity.class);
+        startActivity(i);
+    }
 }

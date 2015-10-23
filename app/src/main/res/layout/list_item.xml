@@ -19,6 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@+id/item_app_icon"
         android:textSize="32sp"
+        android:textColor="#472e14"
         />
 
 </RelativeLayout>

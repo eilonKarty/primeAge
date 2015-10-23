@@ -162,7 +162,9 @@ public class PrimeDialer extends Activity {
             String str = "tel:" + number;
             Uri uri = Uri.parse(str);
             Intent intent = new Intent(Intent.ACTION_CALL, uri);
-            startActivity(intent);
+            try {
+                startActivity(intent);
+            }catch(Exception e){};
         }
     }
 

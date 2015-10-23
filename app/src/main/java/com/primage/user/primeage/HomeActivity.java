@@ -33,25 +33,6 @@ public class HomeActivity extends Activity {
         TextView tv = (TextView)findViewById(R.id.date);
         tv.setText(date);
 
-
-        ImageButton button = (ImageButton)findViewById(R.id.apps_button2);
-        button.setOnTouchListener(new View.OnTouchListener() {
-            long startTime = 0;
-            long estimatedTime = 0;
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                if(event.getAction() == MotionEvent.ACTION_DOWN){
-                    //start calculate your time here
-                    startTime = System.currentTimeMillis();
-                }
-                if(event.getAction() == MotionEvent.ACTION_UP){
-                    estimatedTime = System.currentTimeMillis() - startTime;
-                    TextView tv = (TextView) findViewById(R.id.date);
-                    tv.setText("" + estimatedTime);
-                }
-                return true;
-            }
-        });
     }
 
 
@@ -64,6 +45,12 @@ public class HomeActivity extends Activity {
     // A method for starting the dialer
     public void popDialer(View v) {
         Intent i = new Intent(this, PrimeDialer.class);
+        startActivity(i);
+    }
+
+    // A method for opening contacts
+    public void popContacts(View v) {
+        Intent i = new Intent(this, ContactsActivity.class);
         startActivity(i);
     }
 }
