@@ -25,7 +25,7 @@ public class TutorialActivity_2 extends Activity {
         Globals.setScreenHeight(size.y);
         Globals.setScreenWidth(size.x);
 
-        setContentView(R.layout.activity_tutorial_activity_1);
+        setContentView(R.layout.activity_tutorial_activity_2);
     }
 
 
