@@ -7,6 +7,7 @@ import android.graphics.Point;
 import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Display;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -35,9 +36,10 @@ public class TutorialActivity_1 extends Activity {
 
         setContentView(R.layout.activity_tutorial_activity_1);
 
-/*
+
         //Listener implementation
         View.OnClickListener continueTutorial1Listener = new View.OnClickListener() {
+            @Override
             public void onClick(View v) {
                 //TODO add check that user chose page preferences
                 Intent tutorial2 = new Intent(v.getContext(), TutorialActivity_2.class);
@@ -45,16 +47,30 @@ public class TutorialActivity_1 extends Activity {
             }
         };
 
+        View.OnClickListener textSizeListener = new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                v.setSelected(true);
+                Log.i(this.toString(), "onClick");
+                //TODO send the text size to sharedPreferences
+            }
+        };
+
         //set buttons listeners
         ImageButton pushToContinueButton= (ImageButton)findViewById(R.id.pushToContinueButton);
         pushToContinueButton.setOnClickListener(continueTutorial1Listener);
 
+        //set buttons listeners and backgroundRes for text size buttons
+        Button smallTextSizeButton= (Button)findViewById(R.id.smallTextSizeButton);
+        smallTextSizeButton.setOnClickListener(textSizeListener);
 
-        //set buttons graphic states
-        Button smallTextSize= (Button)findViewById(R.id.TextSizeButton);
-        smallTextSize.setBackgroundResource(R.drawable.main_button_custom);
+        Button mediumTextSizeButton= (Button)findViewById(R.id.mediumTextSizeButton);
+        mediumTextSizeButton.setOnClickListener(textSizeListener);
 
-*/
+        Button bigTextSizeButton= (Button)findViewById(R.id.bigTextSizeButton);
+        bigTextSizeButton.setOnClickListener(textSizeListener);
+
+
     }
 
 

@@ -31,6 +31,7 @@ public class HomeActivity extends Activity {
         userPreferences= getSharedPreferences(USER_PREFERENCES, MODE_PRIVATE);
         //checking if this is the first run
         boolean firstRun= userPreferences.getBoolean(FIRST_RUN,true);
+
         if (firstRun){
             Intent tutorial= new Intent(this, TutorialActivity_1.class);
             startActivity(tutorial);
