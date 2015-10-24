@@ -59,6 +59,7 @@ public class HomeActivity extends Activity {
         TextView tv = (TextView)findViewById(R.id.date);
         tv.setText(date);
 
+<<<<<<< HEAD
 
         ImageButton button = (ImageButton)findViewById(R.id.apps_button2);
         button.setOnTouchListener(new View.OnTouchListener() {
@@ -79,6 +80,8 @@ public class HomeActivity extends Activity {
             }
         });
 
+=======
+>>>>>>> remotes/origin/dev_eilon
     }
 
 
@@ -91,6 +94,12 @@ public class HomeActivity extends Activity {
     // A method for starting the dialer
     public void popDialer(View v) {
         Intent i = new Intent(this, PrimeDialer.class);
+        startActivity(i);
+    }
+
+    // A method for opening contacts
+    public void popContacts(View v) {
+        Intent i = new Intent(this, ContactsActivity.class);
         startActivity(i);
     }
 }

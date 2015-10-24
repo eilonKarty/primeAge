@@ -46,39 +46,39 @@ android:orientation="vertical" >
 
                 <Button
                     android:background="@drawable/btn"
-                    android:id="@+id/apps_button3"
+                    android:id="@+id/oneButton"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:layout_margin="0dp"
-                    android:textSize="32sp"
+                    android:textSize="40sp"
                     android:textStyle="bold"
-                    android:text="1"
-                    android:onClick="addOne"/>
+                    android:textColor="#472e14"
+                    android:text="1" />
 
                 <Button
                     android:background="@drawable/btn"
-                    android:id="@+id/apps_button4"
+                    android:id="@+id/twoButton"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:layout_margin="0dp"
-                    android:textSize="32sp"
+                    android:textSize="40sp"
                     android:textStyle="bold"
                     android:text="2"
-                    android:onClick="addTwo"/>
+                    android:textColor="#472e14" />
 
                 <Button
                     android:background="@drawable/btn"
-                    android:id="@+id/apps_button200"
+                    android:id="@+id/threeButton"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:layout_margin="0dp"
-                    android:textSize="32sp"
+                    android:textSize="40sp"
                     android:textStyle="bold"
                     android:text="3"
-                    android:onClick="addThree"/>
+                    android:textColor="#472e14" />
 
             </TableRow>
 
@@ -91,39 +91,39 @@ android:orientation="vertical" >
 
                 <Button
                     android:background="@drawable/btn"
-                    android:id="@+id/apps_button5"
+                    android:id="@+id/fourButton"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:layout_margin="0dp"
-                    android:textSize="32sp"
+                    android:textSize="40sp"
                     android:textStyle="bold"
                     android:text="4"
-                    android:onClick="addFour"/>
+                    android:textColor="#472e14" />
 
                 <Button
                     android:background="@drawable/btn"
-                    android:id="@+id/apps_button6"
+                    android:id="@+id/fiveButton"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:layout_margin="0dp"
-                    android:textSize="32sp"
+                    android:textSize="40sp"
                     android:textStyle="bold"
                     android:text="5"
-                    android:onClick="addFive"/>
+                    android:textColor="#472e14" />
 
                 <Button
                     android:background="@drawable/btn"
-                    android:id="@+id/apps_button300"
+                    android:id="@+id/sixButton"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:layout_margin="0dp"
-                    android:textSize="32sp"
+                    android:textSize="40sp"
                     android:textStyle="bold"
                     android:text="6"
-                    android:onClick="addSix"/>
+                    android:textColor="#472e14" />
 
             </TableRow>
 
@@ -136,39 +136,39 @@ android:orientation="vertical" >
 
                 <Button
                     android:background="@drawable/btn"
-                    android:id="@+id/apps_button7"
+                    android:id="@+id/sevenButton"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:layout_margin="0dp"
-                    android:textSize="32sp"
+                    android:textSize="40sp"
                     android:textStyle="bold"
                     android:text="7"
-                    android:onClick="addSeven"/>
+                    android:textColor="#472e14" />
 
                 <Button
                     android:background="@drawable/btn"
-                    android:id="@+id/apps_button8"
+                    android:id="@+id/eightButton"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:layout_margin="0dp"
-                    android:textSize="32sp"
+                    android:textSize="40sp"
                     android:textStyle="bold"
                     android:text="8"
-                    android:onClick="addEight"/>
+                    android:textColor="#472e14" />
 
                 <Button
                     android:background="@drawable/btn"
-                    android:id="@+id/apps_button400"
+                    android:id="@+id/nineButton"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:layout_margin="0dp"
-                    android:textSize="32sp"
+                    android:textSize="40sp"
                     android:textStyle="bold"
                     android:text="9"
-                    android:onClick="addNine"/>
+                    android:textColor="#472e14" />
 
             </TableRow>
 
@@ -181,39 +181,39 @@ android:orientation="vertical" >
 
             <Button
                 android:background="@drawable/btn"
-                android:id="@+id/apps_button9"
+                android:id="@+id/starButton"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
-                android:textSize="32sp"
+                android:textSize="40sp"
                 android:textStyle="bold"
                 android:text="*"
-                android:onClick="addStar"/>
+                android:textColor="#472e14" />
 
             <Button
                 android:background="@drawable/btn"
-                android:id="@+id/apps_button10"
+                android:id="@+id/zeroButton"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
-                android:textSize="32sp"
+                android:textSize="40sp"
                 android:textStyle="bold"
                 android:text="0"
-                android:onClick="addZero"/>
+                android:textColor="#472e14" />
 
             <Button
                 android:background="@drawable/btn"
-                android:id="@+id/apps_button500"
+                android:id="@+id/hashButton"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
-                android:textSize="32sp"
+                android:textSize="40sp"
                 android:textStyle="bold"
                 android:text="#"
-                android:onClick="addHash"/>
+                android:textColor="#472e14" />
 
         </TableRow>
 
@@ -231,9 +231,7 @@ android:orientation="vertical" >
                 android:layout_weight="1"
                 android:layout_height="fill_parent"
                 android:layout_margin="0dp"
-                android:textSize="32sp"
-
-                android:onClick="makeCall"/>
+                android:textSize="40sp" />
 
             <Button
                 android:background="@drawable/delete"
@@ -242,7 +240,7 @@ android:orientation="vertical" >
                 android:layout_weight="1"
                 android:layout_height="fill_parent"
                 android:layout_margin="0dp"
-                android:textSize="32sp"
+                android:textSize="40sp"
                 android:onClick="deleteFigure"/>
 
 
@@ -262,8 +260,7 @@ android:orientation="vertical" >
                 android:layout_width="0dip"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:layout_margin="0dp"
-                android:onClick="finishAct"/>
+                android:layout_margin="0dp" />
 
             <ImageButton
                 android:background="@drawable/btnm"
@@ -271,8 +268,7 @@ android:orientation="vertical" >
                 android:layout_width="0dip"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:layout_margin="0dp"
-                android:onClick="goHome"/>
+                android:layout_margin="0dp" />
 
             <ImageButton
                 android:background="@drawable/btnr"
@@ -280,8 +276,7 @@ android:orientation="vertical" >
                 android:layout_width="0dip"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:layout_margin="0dp"
-                android:onClick="doNothing"/>
+                android:layout_margin="0dp" />
 
         </TableRow>
 

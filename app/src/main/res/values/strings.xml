@@ -7,9 +7,15 @@
     <string name="title_activity_apps_list">AppsListActivity</string>
     <string name="title_activity_app_detail">AppDetail</string>
     <string name="title_activity_prime_dialer">primeDialer</string>
+<<<<<<< HEAD
     <string name="title_activity_tutorial_activity_1">TutorialActivity_1</string>
     <string name="title_activity_tutorial_activity_2">TutorialActivity_2</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
 
+=======
+    <string name="title_activity_contact_list">ContactList</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_contacts">ContactsActivity</string>
+>>>>>>> remotes/origin/dev_eilon
 </resources>
