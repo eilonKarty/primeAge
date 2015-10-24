@@ -20,6 +20,7 @@ public class HomeActivity extends Activity {
     //shared preferences conventions to be used by any activity that needs them
     public static final String USER_PREFERENCES="userPreference";
     public static final String FIRST_RUN="firstRun";
+    public static final String PRESSING_DURATION="pressingDuration";
     public static SharedPreferences userPreferences;
 
 

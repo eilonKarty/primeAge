@@ -5,6 +5,7 @@ import android.Manifest;
 import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.provider.Settings;
@@ -30,8 +31,8 @@ import com.primage.user.primeage.HomeActivity.*;
 public class TutorialActivity_2 extends Activity {
 
 
-    //Shared preferences variables
     public static long pressingDuration;
+    public static int pressingCounter=0;
 
 
     //Variable to store brightness value
@@ -47,15 +48,13 @@ public class TutorialActivity_2 extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        //getting screen measures
-        Display display = getWindowManager().getDefaultDisplay();
-        Point size = new Point();
-        display.getSize(size);
-        Globals.setScreenHeight(size.y);
-        Globals.setScreenWidth(size.x);
-
         setContentView(R.layout.activity_tutorial_activity_2);
+
+        //reset static variables
+        pressingDuration=0;
+        pressingCounter=0;
+
+
 
 
         //getting user preferences from previous session
@@ -70,13 +69,17 @@ public class TutorialActivity_2 extends Activity {
 
             @Override
             public boolean onTouch(View v, MotionEvent event) {
+                long sessionPressingDuration;
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    v.setBackgroundResource(R.drawable.pressure_button_pressed);
                     //start calculate your time here
                     startTime = System.currentTimeMillis();
                 }
                 if (event.getAction() == MotionEvent.ACTION_UP) {
-                    pressingDuration = System.currentTimeMillis() - startTime;
+                    v.setBackgroundResource(R.drawable.pressure_button);
+                    sessionPressingDuration = System.currentTimeMillis() - startTime;
                     Log.d("pressing duration:", String.valueOf(pressingDuration));
+                    updatePressingDuration(sessionPressingDuration);
                 }
                 return true;
             }
@@ -176,7 +179,7 @@ public class TutorialActivity_2 extends Activity {
             public void onStopTrackingTouch(SeekBar seekBar) {
                 //Set the system brightness using the brightness variable value
                 boolean writeResult= Settings.System.putInt(cResolver, Settings.System.SCREEN_BRIGHTNESS, brightness);
-                Log.i("brightness result:", String.valueOf(writeResult));
+                Log.i("sys settings write:", String.valueOf(writeResult));
                 //Get the current window attributes
                 LayoutParams layoutpars = window.getAttributes();
                 //Set the brightness of this window
@@ -187,6 +190,11 @@ public class TutorialActivity_2 extends Activity {
 
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 brightness = progress;
+                LayoutParams layoutpars = window.getAttributes();
+                //Set the brightness of this window
+                layoutpars.screenBrightness = brightness / (float) 255;
+                //Apply attribute changes to this window
+                window.setAttributes(layoutpars);
                 /*
                 //Set the minimal brightness level
                 //if seek bar is 20 or any value below
@@ -231,5 +239,24 @@ public class TutorialActivity_2 extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+
+    /*
+    * This method calculate the new pressingDuration by the current value and the duration
+    * from the last measure.
+    * The calculation is simple average minus 20% (to avoid false positive)
+    * */
+    private void updatePressingDuration(long lastDuration){
+        pressingCounter++;
+        pressingDuration= (pressingDuration + lastDuration ) / pressingCounter;
+        pressingDuration= (long)(pressingDuration * 0.80);
+
+        //write value to shared reference variable
+        SharedPreferences userPreferences= getSharedPreferences(HomeActivity.USER_PREFERENCES, MODE_PRIVATE);
+        SharedPreferences.Editor editor= userPreferences.edit();
+        editor.putLong(HomeActivity.PRESSING_DURATION, pressingDuration);
+        boolean succeed=editor.commit();
+        Log.i("Shared Pref commit:", String.valueOf(succeed));
     }
 }
