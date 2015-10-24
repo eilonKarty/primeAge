@@ -26,12 +26,9 @@ public class PrimeDialer extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prime_dialer);
-<<<<<<< HEAD
-=======
 
         assistant = new Assistant(PrimeDialer.this, 1);
 
->>>>>>> origin/Or
         // Setting the background color to white
         View view = this.getWindow().getDecorView();
         view.setBackgroundColor(-1);
@@ -219,10 +216,26 @@ public class PrimeDialer extends Activity {
             }
         });
 
+    /*
+        //Listener of assitant
+        Button assistantButton = (Button) findViewById(R.id.assistant_button);
+        assistantButton.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (SimpliSystemServices.waitAfterClick(v, event, context)) {
+                    if (!isAssistantMode) {
+                        setAssistantMode(v);
+                    } else {
+                        setGeneralMode(v);
+                    }
+                }
+                return false;
+            }
+        });
+      */
     }
 
-
-        @Override
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_prime_dialer, menu);
@@ -261,10 +274,8 @@ public class PrimeDialer extends Activity {
         checkNumberSize();
     }
 
-
-
     public void deleteFigure(View v) {
-        if (!isAssistantMode) {
+        if (isAssistantMode) {
             boolean flg = false;
             if (number.length() != 0) {
                 if (number.length() == 5 || number.length() == 9) {
@@ -288,27 +299,21 @@ public class PrimeDialer extends Activity {
     }
 
     public void makeCall(View v){
-<<<<<<< HEAD
-        if(number.length() !=0) {
-            String str = "tel:" + number;
-            Uri uri = Uri.parse(str);
-            Intent intent = new Intent(Intent.ACTION_CALL, uri);
-            try {
-                startActivity(intent);
-            }catch(Exception e){};
-=======
         if (!isAssistantMode) {
             if (number.length() != 0) {
                 String str = "tel:" + number;
                 Uri uri = Uri.parse(str);
                 Intent intent = new Intent(Intent.ACTION_CALL, uri);
-                startActivity(intent);
+                try {
+                    startActivity(intent);
+                } catch (Exception e) {
+                }
+                ;
             }
         }
         else {
             assistant.button.setText("Press here to make a \n call after inserting \n the number");
             assistant.speakOut("Press here to make a call after inserting the number");
->>>>>>> origin/Or
         }
     }
 

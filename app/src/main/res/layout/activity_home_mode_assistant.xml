@@ -35,8 +35,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
                 android:textSize="32sp"
-                android:textColor="#ffffff"
-                android:text="Hello World"/>
+                />
 
 
         </TableRow>
@@ -49,32 +48,30 @@
             android:layout_weight="1"
             android:weightSum="3">
 
-            <ImageButton
+            <Button
                 android:background="@drawable/phonebtn"
                 android:id="@+id/phone_button"
                 android:layout_height="wrap_content"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_margin="0dp"
-                android:onClick="openPhone"/>
+                />
 
-            <ImageButton
+            <Button
                 android:background="@drawable/messagesbtn"
                 android:id="@+id/messages_button"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:layout_margin="0dp"
-                android:onClick="openMessages"/>
+                android:layout_margin="0dp" />
 
-            <ImageButton
+            <Button
                 android:background="@drawable/alarmbtn"
                 android:id="@+id/clock_button"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:layout_margin="0dp"
-                android:onClick="openClock"/>
+                android:layout_margin="0dp" />
 
         </TableRow>
 
@@ -85,32 +82,29 @@
             android:layout_weight="1"
             android:weightSum="3">
 
-            <ImageButton
+            <Button
                 android:background="@drawable/contactsbtn"
                 android:id="@+id/contacts_button"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:layout_margin="0dp"
-                android:onClick="openContacts"/>
+                android:layout_margin="0dp" />
 
-            <ImageButton
+            <Button
                 android:background="@drawable/flashbtn"
                 android:id="@+id/flashlight_button"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:layout_margin="0dp"
-                android:onClick="openFlashlight"/>
+                android:layout_margin="0dp" />
 
-            <ImageButton
+            <Button
                 android:background="@drawable/cambtn"
                 android:id="@+id/camera_button"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:layout_margin="0dp"
-                android:onClick="openCamera"/>
+                android:layout_margin="0dp" />
 
         </TableRow>
 
@@ -121,32 +115,29 @@
             android:layout_weight="1"
             android:weightSum="3">
 
-            <ImageButton
+            <Button
                 android:background="@drawable/newsbtn"
                 android:id="@+id/apps_button5"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:layout_margin="0dp"
-                android:onClick="openNews"/>
+                android:layout_margin="0dp" />
 
-            <ImageButton
+            <Button
                 android:background="@drawable/settingsbtn"
                 android:id="@+id/news_button"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:layout_margin="0dp"
-                android:onClick="openSetting"/>
+                android:layout_margin="0dp" />
 
-            <ImageButton
+            <Button
                 android:background="@drawable/appsbtn"
                 android:id="@+id/apps_button"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:layout_margin="0dp"
-                android:onClick="openApps"/>
+                android:layout_margin="0dp" />
 
         </TableRow>
 
@@ -157,9 +148,6 @@
             android:layout_weight="1"
             android:orientation="horizontal"
             android:weightSum="3">
-            android:src="footer
-
-            <!--Footer Buttons-->
 
             <Button
                 android:id="@+id/assistant_button"
@@ -170,7 +158,6 @@
                 android:gravity="left"
                 android:textAlignment="gravity"
                 android:textSize="23dp"
-                android:onClick="setGeneralMode"
                 />
 
         </LinearLayout>

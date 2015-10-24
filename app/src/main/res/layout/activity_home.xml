@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical"
-    >
+    android:gravity="center"
+    android:orientation="vertical" >
 
     <TableLayout  xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
@@ -35,18 +35,14 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
                 android:textSize="32sp"
-<<<<<<< HEAD
                 android:textColor="#472e14"
                 android:gravity="center" />
-=======
-                android:textColor="#ffffff"
-                android:text="Hello World"/>
 
->>>>>>> origin/Or
+
 
         </TableRow>
 
-
+        
         <TableRow
             android:id="@+id/tableRow1"
             android:layout_width="match_parent"
@@ -60,8 +56,7 @@
                 android:layout_height="wrap_content"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_margin="0dp"
-                android:onClick="popDialer"/>
+                android:layout_margin="0dp" />
 
             <Button
                 android:background="@drawable/messagesbtn"
@@ -94,8 +89,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:layout_margin="0dp"
-                android:onClick="popContacts"/>
+                android:layout_margin="0dp" />
 
             <Button
                 android:background="@drawable/flashbtn"
@@ -145,21 +139,17 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:layout_margin="0dp"
-                android:onClick="showApps"/>
+                android:layout_margin="0dp" />
 
         </TableRow>
 
-        <LinearLayout
-            android:id="@+id/prime_buttons"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
             android:layout_weight="1"
-            android:orientation="horizontal"
-            android:weightSum="3">
-            android:src="footer
+            android:paddingTop="15dp" >
 
-<<<<<<< HEAD
             <Button
                 android:background="@drawable/btnl"
                 android:id="@+id/apps_button7"
@@ -178,43 +168,14 @@
 
             <Button
                 android:background="@drawable/btnr"
-                android:id="@+id/apps_button400"
+                android:id="@+id/assistant_button"
                 android:layout_width="0dip"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp" />
-=======
-            <!--Footer Buttons-->
-            <ImageButton
-                android:id="@+id/back_button"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/back_button_replaceable"
-                android:onClick="showApps"
-                />
 
-            <ImageButton
-                android:id="@+id/home_button"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/home_button_replacable"
-                android:onClick="showApps"
-                />
-
-            <ImageButton
-                android:id="@+id/assistant_button"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/assistant_button_replaceable"
-                android:onClick="setAssistantMode"
-                />
->>>>>>> origin/Or
-
-        </LinearLayout>
+        </TableRow>
 
     </TableLayout>
 
-</LinearLayout>
+</RelativeLayout>

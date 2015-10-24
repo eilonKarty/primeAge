@@ -5,13 +5,10 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.1"
+
     defaultConfig {
         applicationId "com.primage.user.primeage"
-<<<<<<< HEAD
-        minSdkVersion 11
-=======
         minSdkVersion 17
->>>>>>> origin/Or
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
