@@ -1,6 +1,7 @@
 package com.primage.user.primeage;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.os.Vibrator;
@@ -12,10 +13,11 @@ import android.os.Vibrator;
 public class SimpliSystemServices {
     static long then = 0;
     static long startTime = 0;
-    static long estimeatedTime = 0;
+    static long estimatedTime = 0;
 
     // A function that delays a press
     public static boolean waitAfterClick(View v, MotionEvent event, Context context){
+        Log.e("OR-HOMO---------------", "YES");
         long longClickDuration = 100;
         Vibrator vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
         if (event.getAction() == MotionEvent.ACTION_DOWN) {
@@ -36,6 +38,9 @@ public class SimpliSystemServices {
                 return false;
             }
         }
+        then = 0;
+        startTime = 0;
+        estimatedTime = 0;
         return false;
     }
 
@@ -46,10 +51,10 @@ public class SimpliSystemServices {
         }
 
         if(event.getAction() == MotionEvent.ACTION_UP){
-                estimeatedTime = System.currentTimeMillis() - startTime;
+                estimatedTime = System.currentTimeMillis() - startTime;
         }
 
-        return estimeatedTime;
+        return estimatedTime;
     }
 
 }

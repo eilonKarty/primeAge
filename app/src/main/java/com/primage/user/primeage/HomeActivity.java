@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -48,18 +49,37 @@ public class HomeActivity extends Activity {
         this.assistant = new Assistant(HomeActivity.this, 1);
 
 
+
+        //Listener of settings button
+        Button settingsButton = (Button) findViewById(R.id.apps_button6);
+        settingsButton.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                Intent tutorial = new Intent(getApplicationContext(), TutorialActivity_1.class);
+                startActivity(tutorial);
+                return true;
+            }
+        });
+
+
+
         // Setting the background color to white
         View view = this.getWindow().getDecorView();
         view.setBackgroundColor(-1);
+
+        
 
         Button assistantButton = (Button) findViewById(R.id.assistant_button);
         assistantButton.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 if (SimpliSystemServices.waitAfterClick(v, event, HomeActivity.this)) {
+                    Log.e("OR-HOMO---------------","IN THE ASS");
                     if (!isAssistantMode) {
                         setAssistantMode(v);
+                        Log.e("OR-HOMO---------------", "VERY");
                     } else {
+                        Log.e("OR-HOMO---------------","YES");
                         setGeneralMode(v);
                     }
                 }
@@ -216,6 +236,16 @@ public class HomeActivity extends Activity {
     public void setGeneralMode(View view) {
         setContentView(R.layout.activity_home);
         isAssistantMode = false;
+        Button assistantButton = (Button)findViewById(R.id.assistant_button);
+        assistantButton.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if(SimpliSystemServices.waitAfterClick(v, event, getApplicationContext())){
+                    setAssistantMode(v);
+                }
+                return false;
+            }
+        });
     }
 
     public void setAssistantMode(View view) {
@@ -224,6 +254,15 @@ public class HomeActivity extends Activity {
         assistant.button = (Button) findViewById(R.id.assistant_button);
         assistant.button.setText(" Hi again, welcome to \n the main page, \n don't forget that we \n are always together");
         isAssistantMode = true;
+        assistant.button.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if(SimpliSystemServices.waitAfterClick(v, event, getApplicationContext())){
+                    setGeneralMode(v);
+                }
+                return false;
+            }
+        });
     }
 
     // A method for starting the dialer

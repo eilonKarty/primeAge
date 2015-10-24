@@ -56,8 +56,7 @@
                 android:layout_height="wrap_content"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_margin="0dp"
-                android:onClick="popDialer"/>
+                android:layout_margin="0dp" />
 
             <Button
                 android:background="@drawable/messagesbtn"
@@ -90,8 +89,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:layout_margin="0dp"
-                android:onClick="popContacts"/>
+                android:layout_margin="0dp" />
 
             <Button
                 android:background="@drawable/flashbtn"
@@ -141,8 +139,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:layout_margin="0dp"
-                android:onClick="showApps"/>
+                android:layout_margin="0dp" />
 
         </TableRow>
 
