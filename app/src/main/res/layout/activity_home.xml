@@ -48,7 +48,7 @@
             android:layout_weight="1"
             android:weightSum="3">
 
-            <ImageButton
+            <Button
                 android:background="@drawable/phonebtn"
                 android:id="@+id/apps_button"
                 android:layout_height="wrap_content"
@@ -57,7 +57,7 @@
                 android:layout_margin="0dp"
                 android:onClick="popDialer"/>
 
-            <ImageButton
+            <Button
                 android:background="@drawable/messagesbtn"
                 android:id="@+id/apps_button2"
                 android:layout_width="0dp"
@@ -65,7 +65,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp" />
 
-            <ImageButton
+            <Button
                 android:background="@drawable/alarmbtn"
                 android:id="@+id/apps_button100"
                 android:layout_width="0dp"
@@ -82,7 +82,7 @@
             android:layout_weight="1"
             android:weightSum="3">
 
-            <ImageButton
+            <Button
                 android:background="@drawable/contactsbtn"
                 android:id="@+id/apps_button3"
                 android:layout_width="0dp"
@@ -91,7 +91,7 @@
                 android:layout_margin="0dp"
                 android:onClick="popContacts"/>
 
-            <ImageButton
+            <Button
                 android:background="@drawable/flashbtn"
                 android:id="@+id/apps_button4"
                 android:layout_width="0dp"
@@ -99,7 +99,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp" />
 
-            <ImageButton
+            <Button
                 android:background="@drawable/cambtn"
                 android:id="@+id/apps_button200"
                 android:layout_width="0dp"
@@ -116,7 +116,7 @@
             android:layout_weight="1"
             android:weightSum="3">
 
-            <ImageButton
+            <Button
                 android:background="@drawable/newsbtn"
                 android:id="@+id/apps_button5"
                 android:layout_width="0dp"
@@ -125,7 +125,7 @@
                 android:layout_margin="0dp"
                 />
 
-            <ImageButton
+            <Button
                 android:background="@drawable/settingsbtn"
                 android:id="@+id/apps_button6"
                 android:layout_width="0dp"
@@ -133,7 +133,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp" />
 
-            <ImageButton
+            <Button
                 android:background="@drawable/appsbtn"
                 android:id="@+id/apps_button300"
                 android:layout_width="0dp"
@@ -151,7 +151,7 @@
             android:layout_weight="1"
             android:paddingTop="15dp" >
 
-            <ImageButton
+            <Button
                 android:background="@drawable/btnl"
                 android:id="@+id/apps_button7"
                 android:layout_width="0dip"
@@ -159,7 +159,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp" />
 
-            <ImageButton
+            <Button
                 android:background="@drawable/btnm"
                 android:id="@+id/apps_button8"
                 android:layout_width="0dip"
@@ -167,7 +167,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp" />
 
-            <ImageButton
+            <Button
                 android:background="@drawable/btnr"
                 android:id="@+id/apps_button400"
                 android:layout_width="0dip"

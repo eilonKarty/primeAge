@@ -11,10 +11,12 @@ import android.os.Vibrator;
  */
 public class SimpliSystemServices {
     static long then = 0;
+    static long startTime = 0;
+    static long estimeatedTime = 0;
 
-
+    // A function that delays a press
     public static boolean waitAfterClick(View v, MotionEvent event, Context context){
-        long longClickDuration = 14;
+        long longClickDuration = 100;
         Vibrator vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
         if (event.getAction() == MotionEvent.ACTION_DOWN) {
            then = (long) System.currentTimeMillis();
@@ -37,6 +39,17 @@ public class SimpliSystemServices {
         return false;
     }
 
+    // A function that measures
+    public static long timeMeasure(View v, MotionEvent event, Context context){
+        if(event.getAction() == MotionEvent.ACTION_DOWN) {
+            startTime = System.currentTimeMillis();
+        }
 
+        if(event.getAction() == MotionEvent.ACTION_UP){
+                estimeatedTime = System.currentTimeMillis() - startTime;
+        }
+
+        return estimeatedTime;
+    }
 
 }
