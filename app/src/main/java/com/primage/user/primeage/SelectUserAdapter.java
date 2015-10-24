@@ -85,7 +85,6 @@ public class SelectUserAdapter extends BaseAdapter {
         }
 
         Log.e("Image Thumb", "--------------" + data.getThumb());
-
         view.setTag(data);
         return view;
     }
