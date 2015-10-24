@@ -11,12 +11,17 @@ import android.view.View;
 import android.widget.TextView;
 
 public class PrimeDialer extends Activity {
+    boolean isAssistantMode = false;
+    private Assistant assistant;
 
     private String number = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prime_dialer);
+
+        assistant = new Assistant(PrimeDialer.this, 1);
 
         // Setting the background color to white
         View view = this.getWindow().getDecorView();
@@ -140,29 +145,41 @@ public class PrimeDialer extends Activity {
     }
 
     public void deleteFigure(View v) {
-        boolean flg = false;
-        if (number.length() != 0){
-            if (number.length() == 5 || number.length() == 9) {
-                number = number.substring(0, number.length() - 2);
-                flg = true;
-            } else {
-                number = number.substring(0, number.length() - 1);
-            }
+        if (!isAssistantMode) {
+            boolean flg = false;
+            if (number.length() != 0) {
+                if (number.length() == 5 || number.length() == 9) {
+                    number = number.substring(0, number.length() - 2);
+                    flg = true;
+                } else {
+                    number = number.substring(0, number.length() - 1);
+                }
 
-            TextView tv = (TextView) findViewById(R.id.number);
-            tv.setText(number);
-            if (flg){
-                number += "-";
+                TextView tv = (TextView) findViewById(R.id.number);
+                tv.setText(number);
+                if (flg) {
+                    number += "-";
+                }
             }
+        }
+        else {
+            assistant.button.setText("Press here in order \n  to delete a digit \n from text box");
+            assistant.speakOut("Press here in order to delete a digit from text box");
         }
     }
 
     public void makeCall(View v){
-        if(number.length() !=0) {
-            String str = "tel:" + number;
-            Uri uri = Uri.parse(str);
-            Intent intent = new Intent(Intent.ACTION_CALL, uri);
-            startActivity(intent);
+        if (!isAssistantMode) {
+            if (number.length() != 0) {
+                String str = "tel:" + number;
+                Uri uri = Uri.parse(str);
+                Intent intent = new Intent(Intent.ACTION_CALL, uri);
+                startActivity(intent);
+            }
+        }
+        else {
+            assistant.button.setText("Press here to make a \n call after inserting \n the number");
+            assistant.speakOut("Press here to make a call after inserting the number");
         }
     }
 

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/RelativeLayout1"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:gravity="center"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    >
 
     <TableLayout  xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
@@ -39,10 +39,9 @@
                 android:text="Hello World"/>
 
 
-
         </TableRow>
 
-        
+
         <TableRow
             android:id="@+id/tableRow1"
             android:layout_width="match_parent"
@@ -151,42 +150,45 @@
 
         </TableRow>
 
-        <TableRow
-            android:id="@+id/tableRow4"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
+        <LinearLayout
+            android:id="@+id/prime_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:paddingTop="15dp" >
+            android:orientation="horizontal"
+            android:weightSum="3">
+            android:src="footer
+
+            <!--Footer Buttons-->
+            <ImageButton
+                android:id="@+id/back_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/back_button_replaceable"
+                android:onClick="showApps"
+                />
 
             <ImageButton
-                android:background="@drawable/btnl"
-                android:id="@+id/apps_button7"
-                android:layout_width="0dip"
+                android:id="@+id/home_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:layout_margin="0dp"
-                android:onClick="showApps"/>
+                android:background="@drawable/home_button_replacable"
+                android:onClick="showApps"
+                />
 
             <ImageButton
-                android:background="@drawable/btnm"
-                android:id="@+id/apps_button8"
-                android:layout_width="0dip"
+                android:id="@+id/assistant_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:layout_margin="0dp"
-                android:onClick="showApps"/>
+                android:background="@drawable/assistant_button_replaceable"
+                android:onClick="setAssistantMode"
+                />
 
-            <ImageButton
-                android:background="@drawable/btnr"
-                android:id="@+id/apps_button400"
-                android:layout_width="0dip"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:layout_margin="0dp"
-                android:onClick="createAssistant"/>
-
-        </TableRow>
+        </LinearLayout>
 
     </TableLayout>
 
-</RelativeLayout>
+</LinearLayout>
