@@ -17,12 +17,18 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class PrimeDialer extends Activity {
+    boolean isAssistantMode = false;
+    private Assistant assistant;
 
     private String number = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prime_dialer);
+
+        assistant = new Assistant(PrimeDialer.this, 1);
+
         // Setting the background color to white
         View view = this.getWindow().getDecorView();
         view.setBackgroundColor(-1);
@@ -210,10 +216,26 @@ public class PrimeDialer extends Activity {
             }
         });
 
+    /*
+        //Listener of assitant
+        Button assistantButton = (Button) findViewById(R.id.assistant_button);
+        assistantButton.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (SimpliSystemServices.waitAfterClick(v, event, context)) {
+                    if (!isAssistantMode) {
+                        setAssistantMode(v);
+                    } else {
+                        setGeneralMode(v);
+                    }
+                }
+                return false;
+            }
+        });
+      */
     }
 
-
-        @Override
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_prime_dialer, menu);
@@ -252,34 +274,46 @@ public class PrimeDialer extends Activity {
         checkNumberSize();
     }
 
-
-
     public void deleteFigure(View v) {
-        boolean flg = false;
-        if (number.length() != 0){
-            if (number.length() == 5 || number.length() == 9) {
-                number = number.substring(0, number.length() - 2);
-                flg = true;
-            } else {
-                number = number.substring(0, number.length() - 1);
-            }
+        if (isAssistantMode) {
+            boolean flg = false;
+            if (number.length() != 0) {
+                if (number.length() == 5 || number.length() == 9) {
+                    number = number.substring(0, number.length() - 2);
+                    flg = true;
+                } else {
+                    number = number.substring(0, number.length() - 1);
+                }
 
-            TextView tv = (TextView) findViewById(R.id.number);
-            tv.setText(number);
-            if (flg){
-                number += "-";
+                TextView tv = (TextView) findViewById(R.id.number);
+                tv.setText(number);
+                if (flg) {
+                    number += "-";
+                }
             }
+        }
+        else {
+            assistant.button.setText("Press here in order \n  to delete a digit \n from text box");
+            assistant.speakOut("Press here in order to delete a digit from text box");
         }
     }
 
     public void makeCall(View v){
-        if(number.length() !=0) {
-            String str = "tel:" + number;
-            Uri uri = Uri.parse(str);
-            Intent intent = new Intent(Intent.ACTION_CALL, uri);
-            try {
-                startActivity(intent);
-            }catch(Exception e){};
+        if (!isAssistantMode) {
+            if (number.length() != 0) {
+                String str = "tel:" + number;
+                Uri uri = Uri.parse(str);
+                Intent intent = new Intent(Intent.ACTION_CALL, uri);
+                try {
+                    startActivity(intent);
+                } catch (Exception e) {
+                }
+                ;
+            }
+        }
+        else {
+            assistant.button.setText("Press here to make a \n call after inserting \n the number");
+            assistant.speakOut("Press here to make a call after inserting the number");
         }
     }
 

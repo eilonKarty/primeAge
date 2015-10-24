@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/RelativeLayout1"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:gravity="center"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    >
 
     <TableLayout  xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
@@ -35,14 +35,13 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
                 android:textSize="32sp"
-                android:textColor="#472e14"
-                android:gravity="center" />
-
+                android:textColor="#ffffff"
+                android:text="Hello World"/>
 
 
         </TableRow>
 
-        
+
         <TableRow
             android:id="@+id/tableRow1"
             android:layout_width="match_parent"
@@ -50,30 +49,32 @@
             android:layout_weight="1"
             android:weightSum="3">
 
-            <Button
+            <ImageButton
                 android:background="@drawable/phonebtn"
-                android:id="@+id/apps_button"
+                android:id="@+id/phone_button"
                 android:layout_height="wrap_content"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_margin="0dp"
-                android:onClick="popDialer"/>
+                android:onClick="openPhone"/>
 
-            <Button
+            <ImageButton
                 android:background="@drawable/messagesbtn"
-                android:id="@+id/apps_button2"
+                android:id="@+id/messages_button"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:layout_margin="0dp" />
+                android:layout_margin="0dp"
+                android:onClick="openMessages"/>
 
-            <Button
+            <ImageButton
                 android:background="@drawable/alarmbtn"
-                android:id="@+id/apps_button100"
+                android:id="@+id/clock_button"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:layout_margin="0dp" />
+                android:layout_margin="0dp"
+                android:onClick="openClock"/>
 
         </TableRow>
 
@@ -84,30 +85,32 @@
             android:layout_weight="1"
             android:weightSum="3">
 
-            <Button
+            <ImageButton
                 android:background="@drawable/contactsbtn"
-                android:id="@+id/apps_button3"
+                android:id="@+id/contacts_button"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
-                android:onClick="popContacts"/>
+                android:onClick="openContacts"/>
 
-            <Button
+            <ImageButton
                 android:background="@drawable/flashbtn"
-                android:id="@+id/apps_button4"
+                android:id="@+id/flashlight_button"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:layout_margin="0dp" />
+                android:layout_margin="0dp"
+                android:onClick="openFlashlight"/>
 
-            <Button
+            <ImageButton
                 android:background="@drawable/cambtn"
-                android:id="@+id/apps_button200"
+                android:id="@+id/camera_button"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:layout_margin="0dp" />
+                android:layout_margin="0dp"
+                android:onClick="openCamera"/>
 
         </TableRow>
 
@@ -118,67 +121,60 @@
             android:layout_weight="1"
             android:weightSum="3">
 
-            <Button
+            <ImageButton
                 android:background="@drawable/newsbtn"
                 android:id="@+id/apps_button5"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
-                />
+                android:onClick="openNews"/>
 
-            <Button
+            <ImageButton
                 android:background="@drawable/settingsbtn"
-                android:id="@+id/apps_button6"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:layout_margin="0dp" />
-
-            <Button
-                android:background="@drawable/appsbtn"
-                android:id="@+id/apps_button300"
+                android:id="@+id/news_button"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
-                android:onClick="showApps"/>
+                android:onClick="openSetting"/>
+
+            <ImageButton
+                android:background="@drawable/appsbtn"
+                android:id="@+id/apps_button"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:onClick="openApps"/>
 
         </TableRow>
 
-        <TableRow
-            android:id="@+id/tableRow4"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
+        <LinearLayout
+            android:id="@+id/prime_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:paddingTop="15dp" >
+            android:orientation="horizontal"
+            android:weightSum="3">
+            android:src="footer
+
+            <!--Footer Buttons-->
 
             <Button
-                android:background="@drawable/btnl"
-                android:id="@+id/apps_button7"
-                android:layout_width="0dip"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:layout_margin="0dp" />
-
-            <Button
-                android:background="@drawable/btnm"
-                android:id="@+id/apps_button8"
-                android:layout_width="0dip"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:layout_margin="0dp" />
-
-            <Button
-                android:background="@drawable/btnr"
                 android:id="@+id/assistant_button"
-                android:layout_width="0dip"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:layout_margin="0dp" />
+                android:background="@drawable/full_footer"
+                android:gravity="left"
+                android:textAlignment="gravity"
+                android:textSize="23dp"
+                android:onClick="setGeneralMode"
+                />
 
-        </TableRow>
+        </LinearLayout>
 
     </TableLayout>
 
-</RelativeLayout>
+</LinearLayout>
