@@ -89,6 +89,12 @@ public class TutorialActivity_2 extends Activity {
         pushToContinueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Write to shared preference
+                SharedPreferences userPreferences= getSharedPreferences(HomeActivity.USER_PREFERENCES, MODE_PRIVATE);
+                SharedPreferences.Editor editor= userPreferences.edit();
+                editor.putBoolean(HomeActivity.FIRST_RUN, false);
+                boolean succeed=editor.commit();
+                Log.i("Shared Pref commit:", String.valueOf(succeed));
                 finish();
 
             }
@@ -216,9 +222,6 @@ public class TutorialActivity_2 extends Activity {
 
     }
 
-
-
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -260,3 +263,4 @@ public class TutorialActivity_2 extends Activity {
         Log.i("Shared Pref commit:", String.valueOf(succeed));
     }
 }
+

@@ -5,13 +5,8 @@ android {
     buildToolsVersion "23.0.1"
     defaultConfig {
         applicationId "com.primage.user.primeage"
-<<<<<<< HEAD
-        minSdkVersion 17
-        targetSdkVersion 22 //old- 23
-=======
         minSdkVersion 11
         targetSdkVersion 23
->>>>>>> remotes/origin/dev_eilon
         versionCode 1
         versionName "1.0"
     }
@@ -26,9 +21,7 @@ android {
 }
 
 dependencies {
-<<<<<<< HEAD
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:design:23.0.1'
     compile 'com.android.support:appcompat-v7:23.0.1'
     compile 'com.android.support:gridlayout-v7:23.0.1'
@@ -37,9 +30,6 @@ dependencies {
     compile 'com.android.support:percent:23.0.0'
     compile 'com.android.support:leanback-v17:23.0.1'
     compile 'com.android.support:support-v4:23.0.1'
-=======
-    compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:23.1.0'
-    compile 'com.android.support:design:23.1.0'
->>>>>>> remotes/origin/dev_eilon
+    
 }

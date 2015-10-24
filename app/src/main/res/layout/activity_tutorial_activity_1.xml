@@ -1,12 +1,12 @@
 
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="fill_parent"
-android:layout_height="match_parent"
-android:orientation="vertical"
-android:weightSum="2"
-android:background="#F0EBDC"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="2"
+    android:background="#F0EBDC"
 
     >
 
@@ -61,20 +61,20 @@ android:background="#F0EBDC"
             android:layout_marginLeft="40dp"
             android:textColor="#472E14"
 
-             />
+            />
 
         <EditText
-                android:id="@+id/nameFieldButton"
-                android:layout_width="290dip"
-                android:layout_height="60dp"
-                android:background="@drawable/text_box"
-                android:layout_marginLeft="40dp"
-                android:layout_marginTop="10dp"
-                android:layout_gravity="top"
-                android:singleLine="true"
-                android:padding="12dp"
-                android:hint="Type your name here"
-                android:textColorHint="#513510"
+            android:id="@+id/nameFieldButton"
+            android:layout_width="290dip"
+            android:layout_height="60dp"
+            android:background="@drawable/text_box"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="top"
+            android:singleLine="true"
+            android:padding="12dp"
+            android:hint="Type your name here"
+            android:textColorHint="#513510"
 
             />
 
@@ -156,5 +156,4 @@ android:background="#F0EBDC"
     </LinearLayout>
 
 </LinearLayout>
-
 

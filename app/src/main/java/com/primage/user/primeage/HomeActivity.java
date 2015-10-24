@@ -1,4 +1,5 @@
 package com.primage.user.primeage;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -14,7 +15,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 
-
 public class HomeActivity extends Activity {
 
     //shared preferences conventions to be used by any activity that needs them
@@ -22,7 +22,6 @@ public class HomeActivity extends Activity {
     public static final String FIRST_RUN="firstRun";
     public static final String PRESSING_DURATION="pressingDuration";
     public static SharedPreferences userPreferences;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,16 +37,11 @@ public class HomeActivity extends Activity {
             startActivity(tutorial);
         }
 
-
         setContentView(R.layout.activity_home);
-        // Setting the background color to white- Tzion: "Why? I'm cancel that"
-        /*
+
+        // Setting the background color to white
         View view = this.getWindow().getDecorView();
         view.setBackgroundColor(-1);
-        */
-
-
-
 
 
         // Display date
@@ -59,27 +53,6 @@ public class HomeActivity extends Activity {
         TextView tv = (TextView)findViewById(R.id.date);
         tv.setText(date);
 
-/*
-
-        ImageButton button = (ImageButton)findViewById(R.id.apps_button2);
-        button.setOnTouchListener(new View.OnTouchListener() {
-            long startTime = 0;
-            long estimatedTime = 0;
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                if(event.getAction() == MotionEvent.ACTION_DOWN){
-                    //start calculate your time here
-                    startTime = System.currentTimeMillis();
-                }
-                if(event.getAction() == MotionEvent.ACTION_UP){
-                    estimatedTime = System.currentTimeMillis() - startTime;
-                    TextView tv = (TextView) findViewById(R.id.date);
-                    tv.setText("" + estimatedTime);
-                }
-                return true;
-            }
-        });
-*/
     }
 
 
