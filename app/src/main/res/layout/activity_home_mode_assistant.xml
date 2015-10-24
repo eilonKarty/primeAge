@@ -35,14 +35,9 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
                 android:textSize="32sp"
-<<<<<<< HEAD
-                android:textColor="#472e14"
-                android:gravity="center" />
-=======
                 android:textColor="#ffffff"
                 android:text="Hello World"/>
 
->>>>>>> origin/Or
 
         </TableRow>
 
@@ -54,30 +49,32 @@
             android:layout_weight="1"
             android:weightSum="3">
 
-            <Button
+            <ImageButton
                 android:background="@drawable/phonebtn"
-                android:id="@+id/apps_button"
+                android:id="@+id/phone_button"
                 android:layout_height="wrap_content"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_margin="0dp"
-                android:onClick="popDialer"/>
+                android:onClick="openPhone"/>
 
-            <Button
+            <ImageButton
                 android:background="@drawable/messagesbtn"
-                android:id="@+id/apps_button2"
+                android:id="@+id/messages_button"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:layout_margin="0dp" />
+                android:layout_margin="0dp"
+                android:onClick="openMessages"/>
 
-            <Button
+            <ImageButton
                 android:background="@drawable/alarmbtn"
-                android:id="@+id/apps_button100"
+                android:id="@+id/clock_button"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:layout_margin="0dp" />
+                android:layout_margin="0dp"
+                android:onClick="openClock"/>
 
         </TableRow>
 
@@ -88,30 +85,32 @@
             android:layout_weight="1"
             android:weightSum="3">
 
-            <Button
+            <ImageButton
                 android:background="@drawable/contactsbtn"
-                android:id="@+id/apps_button3"
+                android:id="@+id/contacts_button"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
-                android:onClick="popContacts"/>
+                android:onClick="openContacts"/>
 
-            <Button
+            <ImageButton
                 android:background="@drawable/flashbtn"
-                android:id="@+id/apps_button4"
+                android:id="@+id/flashlight_button"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:layout_margin="0dp" />
+                android:layout_margin="0dp"
+                android:onClick="openFlashlight"/>
 
-            <Button
+            <ImageButton
                 android:background="@drawable/cambtn"
-                android:id="@+id/apps_button200"
+                android:id="@+id/camera_button"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:layout_margin="0dp" />
+                android:layout_margin="0dp"
+                android:onClick="openCamera"/>
 
         </TableRow>
 
@@ -122,31 +121,32 @@
             android:layout_weight="1"
             android:weightSum="3">
 
-            <Button
+            <ImageButton
                 android:background="@drawable/newsbtn"
                 android:id="@+id/apps_button5"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
-                />
+                android:onClick="openNews"/>
 
-            <Button
+            <ImageButton
                 android:background="@drawable/settingsbtn"
-                android:id="@+id/apps_button6"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:layout_margin="0dp" />
-
-            <Button
-                android:background="@drawable/appsbtn"
-                android:id="@+id/apps_button300"
+                android:id="@+id/news_button"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
-                android:onClick="showApps"/>
+                android:onClick="openSetting"/>
+
+            <ImageButton
+                android:background="@drawable/appsbtn"
+                android:id="@+id/apps_button"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:onClick="openApps"/>
 
         </TableRow>
 
@@ -159,59 +159,19 @@
             android:weightSum="3">
             android:src="footer
 
-<<<<<<< HEAD
-            <Button
-                android:background="@drawable/btnl"
-                android:id="@+id/apps_button7"
-                android:layout_width="0dip"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:layout_margin="0dp" />
-
-            <Button
-                android:background="@drawable/btnm"
-                android:id="@+id/apps_button8"
-                android:layout_width="0dip"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:layout_margin="0dp" />
-
-            <Button
-                android:background="@drawable/btnr"
-                android:id="@+id/apps_button400"
-                android:layout_width="0dip"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:layout_margin="0dp" />
-=======
             <!--Footer Buttons-->
-            <ImageButton
-                android:id="@+id/back_button"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/back_button_replaceable"
-                android:onClick="showApps"
-                />
 
-            <ImageButton
-                android:id="@+id/home_button"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/home_button_replacable"
-                android:onClick="showApps"
-                />
-
-            <ImageButton
+            <Button
                 android:id="@+id/assistant_button"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/assistant_button_replaceable"
-                android:onClick="setAssistantMode"
+                android:background="@drawable/full_footer"
+                android:gravity="left"
+                android:textAlignment="gravity"
+                android:textSize="23dp"
+                android:onClick="setGeneralMode"
                 />
->>>>>>> origin/Or
 
         </LinearLayout>
 
