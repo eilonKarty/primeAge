@@ -59,7 +59,7 @@ public class HomeActivity extends Activity {
         TextView tv = (TextView)findViewById(R.id.date);
         tv.setText(date);
 
-<<<<<<< HEAD
+/*
 
         ImageButton button = (ImageButton)findViewById(R.id.apps_button2);
         button.setOnTouchListener(new View.OnTouchListener() {
@@ -79,9 +79,7 @@ public class HomeActivity extends Activity {
                 return true;
             }
         });
-
-=======
->>>>>>> remotes/origin/dev_eilon
+*/
     }
 
 

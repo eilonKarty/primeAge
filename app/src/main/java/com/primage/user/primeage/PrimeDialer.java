@@ -26,8 +26,6 @@ public class PrimeDialer extends Activity {
         // Setting the background color to white
         View view = this.getWindow().getDecorView();
         view.setBackgroundColor(-1);
-<<<<<<< HEAD
-=======
         final Context context = getApplicationContext();
 
         Button one = (Button) findViewById(R.id.oneButton);
@@ -163,7 +161,6 @@ public class PrimeDialer extends Activity {
                 return false;
             }
         });
->>>>>>> remotes/origin/dev_eilon
 
     }
 
