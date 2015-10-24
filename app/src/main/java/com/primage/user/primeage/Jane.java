@@ -1,13 +1,13 @@
 package com.primage.user.primeage;
 
 /**
- * Created by OrLak on 16/10/2015.
+ * Created by OrLak on 23/10/2015.
  */
-public class George implements Character {
-    String name = "George";
+public class Jane implements Character {
+    String name = "Jane";
     String gender = "male";
-    String image = "George.png";
-    String startText = "hi, i am ezra, its really nice to meet you!";
+    String image = "Jane.png";
+    String startText = "hi, i am jane, its really nice to meet you!";
 
     public String getName() {
 
