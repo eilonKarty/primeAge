@@ -56,6 +56,7 @@ public class TutorialActivity_1 extends Activity {
                 //TODO add check that user chose page preferences
                 Intent tutorial2 = new Intent(getApplicationContext(), TutorialActivity_2.class);
                 startActivity(tutorial2);
+                finish();
             }
         };
 
