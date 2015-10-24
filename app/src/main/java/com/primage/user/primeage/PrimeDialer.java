@@ -162,6 +162,54 @@ public class PrimeDialer extends Activity {
             }
         });
 
+        Button call = (Button) findViewById(R.id.callbutton);
+        call.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if(SimpliSystemServices.waitAfterClick(v, event, context))
+                {
+                    makeCall(v);
+                }
+                return false;
+            }
+        });
+
+        Button delete = (Button) findViewById(R.id.deletebutton);
+        delete.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if(SimpliSystemServices.waitAfterClick(v, event, context))
+                {
+                    deleteFigure(v);
+                }
+                return false;
+            }
+        });
+
+        Button backbutton = (Button) findViewById(R.id.dialback);
+        backbutton.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if(SimpliSystemServices.waitAfterClick(v, event, context))
+                {
+                    finish();
+                }
+                return false;
+            }
+        });
+
+        Button homeButton = (Button) findViewById(R.id.dialhome);
+        homeButton.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if(SimpliSystemServices.waitAfterClick(v, event, context))
+                {
+                    goHome(v);
+                }
+                return false;
+            }
+        });
+
     }
 
 

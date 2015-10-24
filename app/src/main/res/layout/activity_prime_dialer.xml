@@ -226,7 +226,7 @@ android:orientation="vertical" >
 
             <Button
                 android:background="@drawable/call"
-                android:id="@+id/apps_button11"
+                android:id="@+id/callbutton"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="fill_parent"
@@ -235,7 +235,7 @@ android:orientation="vertical" >
 
             <Button
                 android:background="@drawable/delete"
-                android:id="@+id/apps_button12"
+                android:id="@+id/deletebutton"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="fill_parent"
@@ -254,25 +254,25 @@ android:orientation="vertical" >
 
             >
 
-            <ImageButton
+            <Button
                 android:background="@drawable/btnl"
-                android:id="@+id/apps_button13"
+                android:id="@+id/dialback"
                 android:layout_width="0dip"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp" />
 
-            <ImageButton
+            <Button
                 android:background="@drawable/btnm"
-                android:id="@+id/apps_button14"
+                android:id="@+id/dialhome"
                 android:layout_width="0dip"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp" />
 
-            <ImageButton
+            <Button
                 android:background="@drawable/btnr"
-                android:id="@+id/apps_button700"
+                android:id="@+id/assistantbutton"
                 android:layout_width="0dip"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"

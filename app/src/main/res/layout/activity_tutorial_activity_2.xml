@@ -69,18 +69,18 @@
 
         <FrameLayout
             android:layout_width="320dip"
-            android:layout_height="60dp"
+            android:layout_height="70dp"
             android:layout_marginTop="10dp"
             android:layout_gravity="top|center"
             >
             <SeekBar
                 android:id="@+id/brightness_bar"
                 android:layout_width="285dip"
-                android:layout_height="65dip"
+                android:layout_height="55dip"
                 android:layout_marginLeft="20dip"
                 android:background="@drawable/slider_back"
                 android:thumb="@drawable/slide_bar_custom"
-                android:thumbOffset="19dip"
+                android:thumbOffset="5dip"
                 android:layout_marginTop="10dp">
             </SeekBar>
 
@@ -110,7 +110,7 @@
             android:textStyle="bold"
             android:layout_gravity="center|left"
             android:layout_marginLeft="40dp"
-            android:layout_marginTop="23dp"
+            android:layout_marginTop="13dp"
             android:textColor="#472E14"
             />
 

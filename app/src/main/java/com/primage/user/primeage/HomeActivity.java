@@ -6,10 +6,12 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.primage.user.primeage.tutorial.TutorialActivity_1;
+import com.primage.user.primeage.tutorial.TutorialActivity_2;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -53,6 +55,16 @@ public class HomeActivity extends Activity {
         TextView tv = (TextView)findViewById(R.id.date);
         tv.setText(date);
 
+        //Listener of settings button
+        Button settingsButton = (Button) findViewById(R.id.apps_button6);
+        settingsButton.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                Intent tutorial = new Intent(getApplicationContext(), TutorialActivity_1.class);
+                startActivity(tutorial);
+                return true;
+            }
+        });
     }
 
 

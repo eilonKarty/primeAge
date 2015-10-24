@@ -97,59 +97,24 @@ public class TutorialActivity_1 extends Activity {
 
         //set input-name button
         EditText nameTextButton = (EditText) findViewById(R.id.nameFieldButton);
-        final TextView nameLine= (TextView) findViewById(R.id.nameLine);
+        final TextView nameLine = (TextView) findViewById(R.id.nameLine);
         nameTextButton.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 Log.i("KeyBoard", "Inside the Edit Text");
                 if (actionId == EditorInfo.IME_ACTION_DONE || actionId == EditorInfo.IME_ACTION_NEXT) {
-                    CharSequence name= v.getText();
+                    CharSequence name = v.getText();
                     v.setText("");
                     v.setHint("");
                     Log.i("User Entered name: ", name.toString());
-                    nameLine.setText("Name:    "+name);
+                    nameLine.setText("Name:    " + name);
                 }
                 return true;
             }
         });
+
     }
 
-            //This function keeps only one button pressed
-            private void checkSingleButton(ToggleButton pressed, ToggleButton... others) {
-                if (pressed.isChecked()) {
-                    pressed.toggle();
-                } else {
-                    for (ToggleButton button : others) {
-                        button.setChecked(false);
-                    }
-                    pressed.setChecked(true);
-                }
-
-            }
-
-            @Override
-            public boolean onCreateOptionsMenu(Menu menu) {
-                // Inflate the menu; this adds items to the action bar if it is present.
-                getMenuInflater().inflate(R.menu.menu_tutorial_activity_1, menu);
-                return true;
-            }
-
-            @Override
-            public boolean onOptionsItemSelected(MenuItem item) {
-                // Handle action bar item clicks here. The action bar will
-                // automatically handle clicks on the Home/Up button, so long
-                // as you specify a parent activity in AndroidManifest.xml.
-                int id = item.getItemId();
-
-                //noinspection SimplifiableIfStatement
-                if (id == R.id.action_settings) {
-                    return true;
-                }
-
-                return super.onOptionsItemSelected(item);
-            }
-
-        }
     //This function keeps only one button pressed
     private void checkSingleButton(ToggleButton pressed, ToggleButton... others) {
         if (pressed.isChecked()) {
