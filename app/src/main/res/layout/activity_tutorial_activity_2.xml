@@ -27,11 +27,11 @@
         <Button
             android:id="@+id/assistantBox"
             android:layout_width="80dp"
-            android:layout_height="154dp"
+            android:layout_height="238dp"
             android:gravity="left"
             android:background="@drawable/box"
             android:layout_weight="9"
-            android:textSize="20dp"
+            android:textSize="30dp"
             android:padding="5dp"
 
             />
@@ -84,7 +84,7 @@
                 android:background="@drawable/slider_back"
                 android:thumb="@drawable/slide_bar_custom"
                 android:thumbOffset="3dip"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="30dp">
             </SeekBar>
 
             <!--
@@ -113,7 +113,7 @@
             android:textStyle="bold"
             android:layout_gravity="center|left"
             android:layout_marginLeft="40dp"
-            android:layout_marginTop="13dp"
+            android:layout_marginTop="33dp"
             android:textColor="#472E14"
             />
 
@@ -123,7 +123,7 @@
             android:layout_height="80dp"
             android:orientation="horizontal"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="90dp"
             android:background="@drawable/pressure_button"
             >
         </ImageButton>
@@ -134,8 +134,8 @@
             android:layout_width="300dp"
             android:layout_height="60dp"
             android:background="@drawable/ahead_button_custom"
-            android:layout_gravity="center"
-            android:layout_marginTop="44dp"
+            android:layout_gravity="center|bottom"
+            android:layout_marginTop="104dp"
             />
 
     </LinearLayout>

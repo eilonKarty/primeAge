@@ -226,7 +226,7 @@ public class TutorialActivity_2 extends Activity {
         assistant.button = (Button) findViewById(R.id.assistantBox);
         assistant.button.setText("Now we'll set the screen brightness\n " +
                 "and pressure sensitivity.\n" +
-                "Please toggle the brightness bar and press the \nbutton below 3 times");
+                "Please toggle the \nbrightness bar and press \nthe button below 3 times");
 
 
         assistant.button.setOnTouchListener(new View.OnTouchListener() {
