@@ -314,8 +314,10 @@ public class HomeActivity extends Activity {
 
     @Override
     public void onPause() {
+        assistant.destroyAssistant();
         super.onPause();
     }
+
 
     @Override
     public void onStop() {
@@ -326,16 +328,16 @@ public class HomeActivity extends Activity {
     /* SWITCH BETWEEN ASSISTANT MODE AND GENERAL MODE */
 
     public void setGeneralMode(View view) {
-        setContentView(R.layout.activity_prime_dialer);
+        setContentView(R.layout.activity_home);
         isAssistantMode = false;
         setListeners();
     }
 
     public void setAssistantMode(View view) {
-        setContentView(R.layout.activity_prime_dialer_mode_assistant);
-        assistant.speakOut(" Hi again, \n welcome to the dialer, \n don't forget that we are always together");
+        setContentView(R.layout.activity_home_mode_assistant);
+        assistant.speakOut(" Hi again, \n welcome to the main page, \n don't forget that we are always together");
         assistant.button = (Button) findViewById(R.id.assistant_button);
-        assistant.button.setText(" Hi again, welcome to \n the dialer, \n don't forget that we \n are always together");
+        assistant.button.setText(" Hi again, welcome to \n the main page, \n don't forget that we \n are always together");
         isAssistantMode = true;
         setListeners();
     }

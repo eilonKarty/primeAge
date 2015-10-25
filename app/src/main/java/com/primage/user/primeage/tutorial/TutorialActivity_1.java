@@ -115,6 +115,18 @@ public class TutorialActivity_1 extends Activity {
                 return true;
             }
         });
+
+
+        //Setting up the assistant
+        assistant = new Assistant(TutorialActivity_1.this, 1);
+        assistant.button = (Button) findViewById(R.id.assistantBox);
+        assistant.speakOut("Welcome To Simpli!\nI am Ezra, your personal assistant\n" +
+                "Let's start with your name and preferred text size.\n" +
+                "I am here for everything you want... Huge?");
+        assistant.button.setText("Welcome To Simpli!\nI'm Ezra, your personal assistant\n" +
+                "Let's start with your name and preferred text size.\n" +
+                "I'm here for everything you \nwant... Huge?");
+
     }
 
     //This function keeps only one button pressed
