@@ -29,13 +29,8 @@ public class Assistant {
 
         textToSpeech = new TextToSpeech(context, new TextToSpeech.OnInitListener() {
             @Override
-            public synchronized void onInit(int status) {
-                try {
-                    wait(500);
-                    Log.i("Assistant", "Done waiting");
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+            public void onInit(int status) {
+
                 Log.i("Assistant","Start on init");
                 if (status == TextToSpeech.SUCCESS) {
                     int language = textToSpeech.setLanguage(Locale.UK);

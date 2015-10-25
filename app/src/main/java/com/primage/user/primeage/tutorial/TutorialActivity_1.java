@@ -31,6 +31,7 @@ import com.primage.user.primeage.Assistant;
 import com.primage.user.primeage.Globals;
 import com.primage.user.primeage.HomeActivity;
 import com.primage.user.primeage.R;
+import com.primage.user.primeage.SimpliSystemServices;
 
 public class TutorialActivity_1 extends Activity {
 
@@ -116,11 +117,17 @@ public class TutorialActivity_1 extends Activity {
         //Setting up the assistant
         assistant = new Assistant(TutorialActivity_1.this, 1);
         assistant.button = (Button) findViewById(R.id.assistantBox);
-        assistant.speakOut("Welcome To Simpli!\nI am Ezra, your personal assistant\n" +
-                "Let's start with your name and preferred text size.\n" +
-                "I am here for everything you want... Huge?");
-        assistant.button.setText("Welcome To Simpli!\nI'm Ezra, your\n personal assistant\n" +
+        assistant.button.setText("Welcome To Simpli!\nI'm Ezra, your\npersonal assistant\n" +
                 "Let's start with your name and preferred text size.");
+
+        assistant.button.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                assistant.speakOut("Welcome To Simply!\nI am Ezra, your personal assistant\n" +
+                        "Let's start with your name and preferred text size");
+                return false;
+            }
+        });
     }
 
     //This function keeps only one button pressed

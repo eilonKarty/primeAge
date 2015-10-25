@@ -221,22 +221,21 @@ public class TutorialActivity_2 extends Activity {
             public void onStartTrackingTouch(SeekBar seekBar) {}
         });
 
-
-
         //Setting up the assistant
-
-        //Setting up the assistant
-        assistant= new Assistant(TutorialActivity_2.this, 1);
+        assistant = new Assistant(TutorialActivity_2.this, 1);
         assistant.button = (Button) findViewById(R.id.assistantBox);
-        assistant.speakOut("Now we'll set the screen brightness\n" +
-                "and we'll find your pressure sensitivity.\n" +
-                "Please toggle the brightness bar and press the \nbutton below 3 times");
-        assistant.button.setText("Now we'll set the screen brightness\n" +
-                "and we'll find your pressure sensitivity.\n" +
-                "Please toggle the brightness bar and press the \nbutton below 3 times");
+        assistant.button.setText("Welcome To Simpli!\nI'm Ezra, your\n personal assistant\n" +
+                "Let's start with your name and preferred text size.");
 
-
-
+        assistant.button.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                assistant.speakOut("Welcome To Simpli!\nI am Ezra, your personal assistant\n" +
+                        "Let's start with your name and preferred text size.\n" +
+                        "I am here for everything you want... Huge?");
+                return false;
+            }
+        });
     }
 
     @Override
