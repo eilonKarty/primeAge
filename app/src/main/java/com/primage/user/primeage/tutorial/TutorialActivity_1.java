@@ -34,22 +34,18 @@ import com.primage.user.primeage.R;
 
 public class TutorialActivity_1 extends Activity {
 
-
-    Assistant assistant;
-
+    private Assistant assistant;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        setContentView(R.layout.activity_tutorial_activity_1);
         //getting screen measures
         Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
         display.getSize(size);
         Globals.setScreenHeight(size.y);
         Globals.setScreenWidth(size.x);
-
-        setContentView(R.layout.activity_tutorial_activity_1);
 
 
         //Listener implementation
@@ -123,10 +119,8 @@ public class TutorialActivity_1 extends Activity {
         assistant.speakOut("Welcome To Simpli!\nI am Ezra, your personal assistant\n" +
                 "Let's start with your name and preferred text size.\n" +
                 "I am here for everything you want... Huge?");
-        assistant.button.setText("Welcome To Simpli!\nI'm Ezra, your personal assistant\n" +
-                "Let's start with your name and preferred text size.\n" +
-                "I'm here for everything you \nwant... Huge?");
-
+        assistant.button.setText("Welcome To Simpli!\nI'm Ezra, your\n personal assistant\n" +
+                "Let's start with your name and preferred text size.");
     }
 
     //This function keeps only one button pressed

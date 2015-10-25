@@ -314,14 +314,14 @@ public class HomeActivity extends Activity {
 
     @Override
     public void onPause() {
-        assistant.destroyAssistant();
+//        assistant.destroyAssistant();
         super.onPause();
     }
 
 
     @Override
     public void onStop() {
-        assistant.destroyAssistant();
+//        assistant.destroyAssistant();
         super.onStop();
     }
 

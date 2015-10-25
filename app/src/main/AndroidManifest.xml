@@ -55,7 +55,9 @@
             android:label="@string/title_activity_tutorial_activity_1"
             android:launchMode = "singleInstance"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+
+            >
         </activity>
         <activity
             android:name=".tutorial.TutorialActivity_2"
