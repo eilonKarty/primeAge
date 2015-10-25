@@ -35,6 +35,7 @@ android:orientation="vertical"
             android:layout_height="wrap_content"
             android:layout_margin="0dp"
             android:textSize="32sp"
+            android:textColor="#5a4418"
             />
 
 
