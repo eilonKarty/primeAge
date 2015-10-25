@@ -83,7 +83,7 @@
                 android:layout_marginLeft="20dip"
                 android:background="@drawable/slider_back"
                 android:thumb="@drawable/slide_bar_custom"
-                android:thumbOffset="5dip"
+                android:thumbOffset="3dip"
                 android:layout_marginTop="10dp">
             </SeekBar>
 

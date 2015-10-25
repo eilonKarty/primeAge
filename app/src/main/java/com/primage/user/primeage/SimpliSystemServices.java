@@ -20,10 +20,14 @@ public class SimpliSystemServices {
         Log.e("OR-HOMO---------------", "YES");
         long longClickDuration = 100;
         Vibrator vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
+
+        //start measure time
         if (event.getAction() == MotionEvent.ACTION_DOWN) {
            then = (long) System.currentTimeMillis();
+            return false;
         }
 
+        //start vibarate after trashold
         if((System.currentTimeMillis() - then) > longClickDuration){
             vibrator.vibrate(100);
         }

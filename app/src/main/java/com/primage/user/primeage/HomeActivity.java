@@ -102,7 +102,7 @@ public class HomeActivity extends Activity {
                 if (SimpliSystemServices.waitAfterClick(v, event, getApplicationContext())) {
                     if(isAssistantMode){
                         assistant.speakOut("This is the dialer, if you want to call someone, press here!");
-                        assistant.button.setText("This is the dialer.\\n if you want to call \\n someone, press here");
+                        assistant.button.setText("This is the dialer.\n if you want to call \n someone, press here");
                     }
                     else{
                         popDialer(v);
@@ -120,7 +120,7 @@ public class HomeActivity extends Activity {
 
                     if(isAssistantMode){
                         assistant.speakOut("Here you can send and read es em es and online messages");
-                        assistant.button.setText("Here you can send \\n and read SMS and \\n online messages.");
+                        assistant.button.setText("Here you can send \n and read SMS and \n online messages.");
                     }
                     else{
                         // TODO
@@ -137,7 +137,7 @@ public class HomeActivity extends Activity {
                 if(SimpliSystemServices.waitAfterClick(v, event, getApplicationContext())){
                     if(isAssistantMode){
                         assistant.speakOut("set an alarm clock and i will wake you up");
-                        assistant.button.setText(" Set an alarm clock \\n and i will wake \\n you up");
+                        assistant.button.setText(" Set an alarm clock \n and i will wake \n you up");
                     }
                     else{
                         // TODO
@@ -154,7 +154,7 @@ public class HomeActivity extends Activity {
                 if(SimpliSystemServices.waitAfterClick(v, event, getApplicationContext())){
                     if(isAssistantMode){
                         assistant.speakOut("look for one of your contacts in order to call");
-                        assistant.button.setText("Look for one of \\n your contacts in \\n order to call");
+                        assistant.button.setText("Look for one of \n your contacts in \n order to call");
                     }
                     else{
                         popContacts(v);
@@ -171,7 +171,7 @@ public class HomeActivity extends Activity {
                 if(SimpliSystemServices.waitAfterClick(v, event, getApplicationContext())){
                     if(isAssistantMode){
                         assistant.speakOut("with one press you can use a great flashlight");
-                        assistant.button.setText("With one button you \\n can use a great \\n flashlight");
+                        assistant.button.setText("With one button you \n can use a great \n flashlight");
                     }
                     else{
                         // TODO
@@ -188,7 +188,7 @@ public class HomeActivity extends Activity {
                 if(SimpliSystemServices.waitAfterClick(v, event, getApplicationContext())){
                     if(isAssistantMode){
                         assistant.speakOut("With one press you can take a photo and it will be saved");
-                        assistant.button.setText(" With one press you \\n can take a photo  \\n and it will be saved");
+                        assistant.button.setText(" With one press you \n can take a photo  \n and it will be saved");
                     }
                     else{
                         // TODO
@@ -206,7 +206,7 @@ public class HomeActivity extends Activity {
 
                     if(isAssistantMode){
                         assistant.speakOut("Here you can catch-up with the news");
-                        assistant.button.setText("Here you can catch-up \\n with the news");
+                        assistant.button.setText("Here you can catch-up \n with the news");
                     }
                     else{
                         // TODO
@@ -223,7 +223,7 @@ public class HomeActivity extends Activity {
                 if (SimpliSystemServices.waitAfterClick(v, event, getApplicationContext())) {
                     if(isAssistantMode){
                         assistant.speakOut("Here you can set some properties about your phone");
-                        assistant.button.setText("Here you can set \\n some properties \\n about your phone");
+                        assistant.button.setText("Here you can set \n some properties \n about your phone");
                     }
                     else{
                         popSettings(v);
@@ -239,8 +239,8 @@ public class HomeActivity extends Activity {
             public boolean onTouch(View v, MotionEvent event) {
                 if (SimpliSystemServices.waitAfterClick(v, event, getApplicationContext())) {
                     if(isAssistantMode){
-                        assistant.speakOut("Here are awl the applications, \\n\\n\\n you can use existing or download new ones");
-                        assistant.button.setText("Here are all the \\n applications, you can \\n use existing or \\n download new ones");
+                        assistant.speakOut("Here are all the applications,\n you can use existing or download new ones");
+                        assistant.button.setText("Here are all the \n applications, you can \n use existing or \n download new ones");
                     }
                     else{
                         showApps(v);

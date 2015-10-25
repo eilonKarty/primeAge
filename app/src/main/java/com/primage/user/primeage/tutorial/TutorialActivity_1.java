@@ -117,13 +117,13 @@ public class TutorialActivity_1 extends Activity {
         //Setting up the assistant
         assistant = new Assistant(TutorialActivity_1.this, 1);
         assistant.button = (Button) findViewById(R.id.assistantBox);
-        assistant.button.setText("Welcome To Simpli!\nI'm Ezra, your\npersonal assistant\n" +
+        assistant.button.setText("Welcome To Simpli!\nI'm Ezra, your\npersonal assistant.\n" +
                 "Let's start with your name and preferred text size.");
 
         assistant.button.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                assistant.speakOut("Welcome To Simply!\nI am Ezra, your personal assistant\n" +
+                assistant.speakOut("Welcome To Simply!\nI am Ezra, your personal assistant.\n" +
                         "Let's start with your name and preferred text size");
                 return false;
             }
