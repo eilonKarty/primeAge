@@ -158,7 +158,7 @@
                 android:background="@drawable/full_footer"
                 android:gravity="left"
                 android:textAlignment="gravity"
-                android:textSize="23dp"
+                android:textSize="36dp"
                 />
 
         </LinearLayout>
