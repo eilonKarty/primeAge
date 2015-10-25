@@ -65,6 +65,7 @@
                 android:layout_margin="0dp"
                 android:textSize="40sp"
                 android:textStyle="bold"
+                android:text="2"
                 android:textColor="#472e14" />
 
             <Button
@@ -244,15 +245,13 @@
 
 
         </TableRow>
-
         <LinearLayout
             android:id="@+id/prime_buttons"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="6"
             android:orientation="horizontal"
-            android:weightSum="3"
-            android:paddingTop="15dp">
+            android:weightSum="3" >
 
             <Button
                 android:id="@+id/assistant_button"
