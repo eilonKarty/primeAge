@@ -27,12 +27,15 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import com.primage.user.primeage.Assistant;
 import com.primage.user.primeage.Globals;
 import com.primage.user.primeage.HomeActivity;
 import com.primage.user.primeage.R;
 
 public class TutorialActivity_1 extends Activity {
 
+
+    Assistant assistant;
 
 
     @Override
@@ -112,7 +115,6 @@ public class TutorialActivity_1 extends Activity {
                 return true;
             }
         });
-
     }
 
     //This function keeps only one button pressed
@@ -149,5 +151,6 @@ public class TutorialActivity_1 extends Activity {
 
         return super.onOptionsItemSelected(item);
     }
+
 
 }

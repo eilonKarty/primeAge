@@ -3,8 +3,8 @@
     <item>
         <shape>
             <size
-                android:width="30dip"
-                android:height="25dip"
+                android:width="70dip"
+                android:height="45dip"
                 />
 
 
@@ -12,8 +12,8 @@
     </item>
     <item
         android:drawable="@drawable/slider_button"
-        android:width="30dip"
-        android:height="25dip"
+        android:width="70dip"
+        android:height="45dip"
 
         />
 

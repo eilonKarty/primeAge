@@ -18,11 +18,13 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.view.WindowManager.LayoutParams;
 
+import com.primage.user.primeage.Assistant;
 import com.primage.user.primeage.Globals;
 import com.primage.user.primeage.HomeActivity;
 import com.primage.user.primeage.R;
@@ -33,6 +35,8 @@ public class TutorialActivity_2 extends Activity {
 
     public static long pressingDuration;
     public static int pressingCounter=0;
+
+    Assistant assistant;
 
 
     //Variable to store brightness value
@@ -99,9 +103,6 @@ public class TutorialActivity_2 extends Activity {
 
             }
         });
-
-
-
 
         /*
         Seek Bar setting section
@@ -219,6 +220,22 @@ public class TutorialActivity_2 extends Activity {
 
             public void onStartTrackingTouch(SeekBar seekBar) {}
         });
+
+
+
+        //Setting up the assistant
+
+        //Setting up the assistant
+        assistant= new Assistant(TutorialActivity_2.this, 1);
+        assistant.button = (Button) findViewById(R.id.assistantBox);
+        assistant.speakOut("Now we'll set the screen brightness\n" +
+                "and we'll find your pressure sensitivity.\n" +
+                "Please toggle the brightness bar and press the \nbutton below 3 times");
+        assistant.button.setText("Now we'll set the screen brightness\n" +
+                "and we'll find your pressure sensitivity.\n" +
+                "Please toggle the brightness bar and press the \nbutton below 3 times");
+
+
 
     }
 

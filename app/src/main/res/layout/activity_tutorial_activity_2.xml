@@ -25,11 +25,14 @@
 
 
         <Button
+            android:id="@+id/assistantBox"
             android:layout_width="80dp"
             android:layout_height="154dp"
             android:gravity="left"
             android:background="@drawable/box"
             android:layout_weight="9"
+            android:textSize="16dp"
+            android:padding="4dp"
 
             />
 

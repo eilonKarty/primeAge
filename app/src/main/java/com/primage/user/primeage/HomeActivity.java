@@ -49,220 +49,249 @@ public class HomeActivity extends Activity {
         this.assistant = new Assistant(HomeActivity.this, 1);
 
 
-
-        //Listener of settings button
-        Button settingsButton = (Button) findViewById(R.id.apps_button6);
-        settingsButton.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                Intent tutorial = new Intent(getApplicationContext(), TutorialActivity_1.class);
-                startActivity(tutorial);
-                return true;
-            }
-        });
-
-
-
         // Setting the background color to white
         View view = this.getWindow().getDecorView();
         view.setBackgroundColor(-1);
 
-        
-
-        Button assistantButton = (Button) findViewById(R.id.assistant_button);
-        assistantButton.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                if (SimpliSystemServices.waitAfterClick(v, event, HomeActivity.this)) {
-                    Log.e("OR-HOMO---------------","IN THE ASS");
-                    if (!isAssistantMode) {
-                        setAssistantMode(v);
-                        Log.e("OR-HOMO---------------", "VERY");
-                    } else {
-                        Log.e("OR-HOMO---------------","YES");
-                        setGeneralMode(v);
-                    }
-                }
-                return false;
-            }
-        });
+        // run listeners initilization
+        setListeners();
     }
 
-    @Override
-    public void onDestroy() {
-        assistant.destroyAssistant();
-        super.onDestroy();
 
+    // A method for setting date and listeners
+    private void setListeners(){
         // Display date
         SimpleDateFormat sdfd = new SimpleDateFormat("EEEE");
         SimpleDateFormat sdfm = new SimpleDateFormat("MMMM");
         SimpleDateFormat sdfdd = new SimpleDateFormat("dd");
         Date d = new Date();
         String date = sdfd.format(d) + ",\n" + sdfm.format(d) + " " + sdfdd.format(d);
-        TextView tv = (TextView) findViewById(R.id.date);
+        TextView tv = (TextView)findViewById(R.id.date);
         tv.setText(date);
 
-        //Listener of settings button
-        Button settingsButton = (Button) findViewById(R.id.apps_button6);
-        settingsButton.setOnTouchListener(new View.OnTouchListener() {
+        // Setting buttons listeners
+
+        assistant.button = (Button)findViewById(R.id.assistant_button);
+        if (isAssistantMode) {
+            assistant.button.setOnTouchListener(new View.OnTouchListener() {
+                @Override
+                public boolean onTouch(View v, MotionEvent event) {
+                    if (SimpliSystemServices.waitAfterClick(v, event, getApplicationContext())) {
+                        setGeneralMode(v);
+                    }
+                    return false;
+                }
+            });
+        }
+        else {
+            assistant.button.setOnTouchListener(new View.OnTouchListener() {
+                @Override
+                public boolean onTouch(View v, MotionEvent event) {
+                    if (SimpliSystemServices.waitAfterClick(v, event, getApplicationContext())) {
+                        setAssistantMode(v);
+                    }
+                    return false;
+                }
+            });
+        }
+
+        Button phone = (Button)findViewById(R.id.phone_button);
+        phone.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                Intent tutorial = new Intent(getApplicationContext(), TutorialActivity_1.class);
-                startActivity(tutorial);
-                return true;
+                if (SimpliSystemServices.waitAfterClick(v, event, getApplicationContext())) {
+                    if(isAssistantMode){
+                        assistant.speakOut("This is the dialer, if you want to call someone, press here!");
+                        assistant.button.setText("This is the dialer.\\n if you want to call \\n someone, press here");
+                    }
+                    else{
+                        popDialer(v);
+                    }
+                }
+                return false;
             }
         });
-    }
-    
 
-    @Override
-    public void onPause() {
-        assistant.destroyAssistant();
-        super.onPause();
+        Button messages = (Button)findViewById(R.id.messages_button);
+        messages.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if(SimpliSystemServices.waitAfterClick(v, event, getApplicationContext())){
+
+                    if(isAssistantMode){
+                        assistant.speakOut("Here you can send and read es em es and online messages");
+                        assistant.button.setText("Here you can send \\n and read SMS and \\n online messages.");
+                    }
+                    else{
+                        // TODO
+                    }
+                }
+                return false;
+            }
+        });
+
+        final Button alarmClock = (Button)findViewById(R.id.clock_button);
+        alarmClock.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if(SimpliSystemServices.waitAfterClick(v, event, getApplicationContext())){
+                    if(isAssistantMode){
+                        assistant.speakOut("set an alarm clock and i will wake you up");
+                        assistant.button.setText(" Set an alarm clock \\n and i will wake \\n you up");
+                    }
+                    else{
+                        // TODO
+                    }
+                }
+                return false;
+            }
+        });
+
+        Button contacts = (Button)findViewById(R.id.contacts_button);
+        contacts.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if(SimpliSystemServices.waitAfterClick(v, event, getApplicationContext())){
+                    if(isAssistantMode){
+                        assistant.speakOut("look for one of your contacts in order to call");
+                        assistant.button.setText("Look for one of \\n your contacts in \\n order to call");
+                    }
+                    else{
+                        popContacts(v);
+                    }
+                }
+                return false;
+            }
+        });
+
+        Button flashlight = (Button)findViewById(R.id.flashlight_button);
+        flashlight.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if(SimpliSystemServices.waitAfterClick(v, event, getApplicationContext())){
+                    if(isAssistantMode){
+                        assistant.speakOut("with one press you can use a great flashlight");
+                        assistant.button.setText("With one button you \\n can use a great \\n flashlight");
+                    }
+                    else{
+                        // TODO
+                    }
+                }
+                return false;
+            }
+        });
+
+        Button camera = (Button)findViewById(R.id.camera_button);
+        camera.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if(SimpliSystemServices.waitAfterClick(v, event, getApplicationContext())){
+                    if(isAssistantMode){
+                        assistant.speakOut("With one press you can take a photo and it will be saved");
+                        assistant.button.setText(" With one press you \\n can take a photo  \\n and it will be saved");
+                    }
+                    else{
+                        // TODO
+                    }
+                }
+                return false;
+            }
+        });
+
+        Button news = (Button)findViewById(R.id.news_button);
+        news.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if(SimpliSystemServices.waitAfterClick(v, event, getApplicationContext())){
+
+                    if(isAssistantMode){
+                        assistant.speakOut("Here you can catch-up with the news");
+                        assistant.button.setText("Here you can catch-up \\n with the news");
+                    }
+                    else{
+                        // TODO
+                    }
+                }
+                return false;
+            }
+        });
+
+        Button settings = (Button)findViewById(R.id.settings_button);
+        settings.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (SimpliSystemServices.waitAfterClick(v, event, getApplicationContext())) {
+                    if(isAssistantMode){
+                        assistant.speakOut("Here you can set some properties about your phone");
+                        assistant.button.setText("Here you can set \\n some properties \\n about your phone");
+                    }
+                    else{
+                        popSettings(v);
+                    }
+                }
+                return false;
+            }
+        });
+
+        Button apps = (Button)findViewById(R.id.apps_button);
+        apps.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (SimpliSystemServices.waitAfterClick(v, event, getApplicationContext())) {
+                    if(isAssistantMode){
+                        assistant.speakOut("Here are awl the applications, \\n\\n\\n you can use existing or download new ones");
+                        assistant.button.setText("Here are all the \\n applications, you can \\n use existing or \\n download new ones");
+                    }
+                    else{
+                        showApps(v);
+                    }
+                }
+                return false;
+            }
+        });
+
+        if (!isAssistantMode) {
+            Button backButton = (Button) findViewById(R.id.back_button);
+            backButton.setOnTouchListener(new View.OnTouchListener() {
+                @Override
+                public boolean onTouch(View v, MotionEvent event) {
+                    if (SimpliSystemServices.waitAfterClick(v, event, getApplicationContext())) {
+                        finish();
+                    }
+                    return false;
+                }
+            });
+
+            Button homeButton = (Button) findViewById(R.id.home_button);
+            homeButton.setOnTouchListener(new View.OnTouchListener() {
+                @Override
+                public boolean onTouch(View v, MotionEvent event) {
+                    if (SimpliSystemServices.waitAfterClick(v, event, getApplicationContext())) {
+                        goHome(v);
+                    }
+                    return false;
+                }
+            });
+        }
     }
+
+    // A method to invoke home page
+    public void goHome(View v) {
+        Intent i = new Intent(this, HomeActivity.class);
+        startActivity(i);
+    }
+
+    // A method to invoke settings
+    public void popSettings(View v) {
+        Intent i = new Intent(this, TutorialActivity_1.class);
+        startActivity(i);
+    }
+
 
     // Apps display method
     public void showApps(View v) {
         Intent i = new Intent(this, AppsListActivity.class);
         startActivity(i);
-    }
-
-    @Override
-    public void onStop() {
-        assistant.destroyAssistant();
-        super.onStop();
-    }
-
-    public void openPhone(View v) {
-        if (!isAssistantMode) {
-            Intent i = new Intent(this, PrimeDialer.class);
-            startActivity(i);
-        }
-        else {
-            assistant.button.setText(" This is the dialer.\n if you want to call \n someone, press here");
-            assistant.speakOut("This is the dialer, if you want to call someone, press here!");
-        }
-    }
-
-    public void openMessages(View v) {
-        if (!isAssistantMode) {
-/*            Intent i = new Intent(this, openMessages.class);
-            startActivity(i);*/
-        }
-        else {
-            assistant.button.setText(" Here you can send \n and read SMS and \n online messages.");
-            assistant.speakOut("Here you can send and read es em es and online messages");
-        }
-    }
-
-    public void openClock(View v) {
-        if (!isAssistantMode) {
-/*            Intent i = new Intent(this, openMessages.class);
-            startActivity(i);*/
-        }
-        else {
-            assistant.button.setText(" Set an alarm clock \n and i will wake \n you up");
-            assistant.speakOut("set an alarm clock and i will wake you up");
-        }
-    }
-
-    public void openContacts(View v) {
-        if (!isAssistantMode) {
-/*            Intent i = new Intent(this, openMessages.class);
-            startActivity(i);*/
-        }
-        else {
-            assistant.button.setText(" Look for one of \n your contacts in \n order to call");
-            assistant.speakOut("look for one of your contacts in order to call");
-        }
-    }
-
-    public void openFlashlight(View v) {
-        if (!isAssistantMode) {
-/*            Intent i = new Intent(this, openMessages.class);
-            startActivity(i);*/
-        }
-        else {
-            assistant.button.setText(" With one button you \n can use a great \n flashlight");
-            assistant.speakOut("with one press you can use a great flashlight");
-        }
-    }
-
-    public void openCamera(View v) {
-        if (!isAssistantMode) {
-/*            Intent i = new Intent(this, openMessages.class);
-            startActivity(i);*/
-        }
-        else {
-            assistant.button.setText(" With one press you \n can take a photo  \n and it will be saved");
-            assistant.speakOut("With one press you can take a photo and it will be saved");
-        }
-    }
-
-    public void openNews(View v) {
-        if (!isAssistantMode) {
-/*            Intent i = new Intent(this, openMessages.class);
-            startActivity(i);*/
-        }
-        else {
-            assistant.button.setText(" Here you can catch-up \n with the news");
-            assistant.speakOut("Here you can catch-up with the news");
-        }
-    }
-
-    public void openSetting(View v) {
-        if (!isAssistantMode) {
-/*            Intent i = new Intent(this, openMessages.class);
-            startActivity(i);*/
-        }
-        else {
-            assistant.button.setText(" Here you can set \n some properties \n about your phone");
-            assistant.speakOut("Here you can set some properties about your phone");
-        }
-    }
-
-    public void openApps(View v) {
-        if (!isAssistantMode) {
-            Intent i = new Intent(this, AppsListActivity.class);
-            startActivity(i);
-        }
-        else {
-            assistant.button.setText(" Here are all the \n applications, you can \n use existing or \n download new ones");
-            assistant.speakOut("Here are awl the applications, \n\n\n you can use existing or download new ones");        }
-    }
-
-    /* SWITCH BETWEEN ASSISTANT MODE AND GENERAL MODE */
-
-    public void setGeneralMode(View view) {
-        setContentView(R.layout.activity_home);
-        isAssistantMode = false;
-        Button assistantButton = (Button)findViewById(R.id.assistant_button);
-        assistantButton.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                if(SimpliSystemServices.waitAfterClick(v, event, getApplicationContext())){
-                    setAssistantMode(v);
-                }
-                return false;
-            }
-        });
-    }
-
-    public void setAssistantMode(View view) {
-        setContentView(R.layout.activity_home_mode_assistant);
-        assistant.speakOut(" Hi again, \n welcome to the main page, \n don't forget that we are always together");
-        assistant.button = (Button) findViewById(R.id.assistant_button);
-        assistant.button.setText(" Hi again, welcome to \n the main page, \n don't forget that we \n are always together");
-        isAssistantMode = true;
-        assistant.button.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                if(SimpliSystemServices.waitAfterClick(v, event, getApplicationContext())){
-                    setGeneralMode(v);
-                }
-                return false;
-            }
-        });
     }
 
     // A method for starting the dialer
@@ -275,5 +304,39 @@ public class HomeActivity extends Activity {
     public void popContacts(View v) {
         Intent i = new Intent(this, ContactsActivity.class);
         startActivity(i);
+    }
+
+    @Override
+    public void onDestroy() {
+        assistant.destroyAssistant();
+        super.onDestroy();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    public void onStop() {
+        assistant.destroyAssistant();
+        super.onStop();
+    }
+
+    /* SWITCH BETWEEN ASSISTANT MODE AND GENERAL MODE */
+
+    public void setGeneralMode(View view) {
+        setContentView(R.layout.activity_prime_dialer);
+        isAssistantMode = false;
+        setListeners();
+    }
+
+    public void setAssistantMode(View view) {
+        setContentView(R.layout.activity_prime_dialer_mode_assistant);
+        assistant.speakOut(" Hi again, \n welcome to the dialer, \n don't forget that we are always together");
+        assistant.button = (Button) findViewById(R.id.assistant_button);
+        assistant.button.setText(" Hi again, welcome to \n the dialer, \n don't forget that we \n are always together");
+        isAssistantMode = true;
+        setListeners();
     }
 }

@@ -29,19 +29,28 @@ public class Assistant {
 
         textToSpeech = new TextToSpeech(context, new TextToSpeech.OnInitListener() {
             @Override
-            public void onInit(int status) {
+            public synchronized void onInit(int status) {
+                try {
+                    wait(500);
+                    Log.i("Assistant", "Done waiting");
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                Log.i("Assistant","Start on init");
                 if (status == TextToSpeech.SUCCESS) {
                     int language = textToSpeech.setLanguage(Locale.UK);
+                    Log.i("Assistant","inside first if");
                     if (language == TextToSpeech.LANG_MISSING_DATA || language == TextToSpeech.LANG_NOT_SUPPORTED) {
                         textToSpeech.setLanguage(Locale.US);
-                        Log.e("error", "This Language is not supported");
+                        Log.i("Assistant", "This Language is not supported");
                     }
 
                     textToSpeech.setPitch(0);
                     textToSpeech.setSpeechRate(1);
+                    Log.i("Assistant", "after set pitch and rate");
                 }
                 else {
-                    Log.e("error", "Initilization Failed!");        }
+                    Log.e("Assistant", "Initilization Failed!");        }
             }
         }
         ); }
